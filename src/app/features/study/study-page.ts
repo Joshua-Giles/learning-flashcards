@@ -5,6 +5,7 @@ import {
   inject,
   input,
   resource,
+  signal,
   untracked,
   viewChild,
 } from '@angular/core';
@@ -16,10 +17,13 @@ import {
   LucideChevronRight,
   LucideShuffle,
 } from '@lucide/angular';
+import { AwardFeedback } from '../../core/award-feedback';
 import { shouldIgnoreShortcut } from '../../core/keyboard';
+import { stillLearning } from '../../core/logic/mastery';
+import { Award, ProgressStore } from '../../core/progress-store';
 import { SetStore } from '../../core/set-store';
 import { FlipCard } from './flip-card';
-import { StudySession } from './study-session';
+import { StudyGrade, StudySession } from './study-session';
 import { StudySummaryPanel } from './study-summary';
 
 @Component({
@@ -49,7 +53,9 @@ import { StudySummaryPanel } from './study-summary';
         </a>
         <div class="min-w-0 flex-1">
           <h1 class="truncate text-lg font-semibold">{{ set.value().title }}</h1>
-          <p class="text-sm text-muted">Study</p>
+          <p class="text-sm text-muted">
+            Study{{ only() === 'learning' ? ' · still learning' : '' }}
+          </p>
         </div>
         @if (!session.finished()) {
           <span class="text-sm text-muted tabular-nums" data-testid="study-position">
@@ -62,8 +68,9 @@ import { StudySummaryPanel } from './study-summary';
         <lf-study-summary
           [summary]="session.summary()"
           [setId]="setId()"
-          (restartMissed)="restart(session.summary().learningCards)"
-          (restartAll)="restart(set.value().cards)"
+          [points]="sessionPoints()"
+          (restartMissed)="begin(session.summary().learningCards)"
+          (restartAll)="begin(set.value().cards)"
         />
       } @else if (session.current(); as card) {
         <!-- Focus target after button clicks, so Space/1/2 keep driving the session. -->
@@ -101,7 +108,7 @@ import { StudySummaryPanel } from './study-summary';
               <button
                 type="button"
                 class="btn btn-secondary min-w-40"
-                (click)="act(() => session.grade('learning'))"
+                (click)="act(gradeLearning)"
                 data-testid="grade-learning"
               >
                 Still learning <kbd>1</kbd>
@@ -109,7 +116,7 @@ import { StudySummaryPanel } from './study-summary';
               <button
                 type="button"
                 class="btn btn-primary min-w-40"
-                (click)="act(() => session.grade('knew'))"
+                (click)="act(gradeKnew)"
                 data-testid="grade-knew"
               >
                 Knew it <kbd>2</kbd>
@@ -182,7 +189,15 @@ export class StudyPage {
   /** Optional `?card=<id>` query param to start at a specific card (used by search). */
   readonly card = input<string>();
 
+  private readonly progress = inject(ProgressStore);
+  private readonly feedback = inject(AwardFeedback);
+
+  /** Optional `?only=learning` query param: just the cards still being learned. */
+  readonly only = input<string>();
+
   protected readonly session = new StudySession();
+  protected readonly sessionPoints = signal(0);
+  private passRecorded = false;
   private readonly stage = viewChild<ElementRef<HTMLElement>>('stage');
   protected readonly set = resource({
     params: () => this.setId(),
@@ -194,11 +209,51 @@ export class StudyPage {
       if (!this.set.hasValue()) return;
       const set = this.set.value();
       const startAt = this.card();
+      const only = this.only();
       untracked(() => {
-        this.session.start(set.cards, { startAt });
+        const cards =
+          only === 'learning' ? stillLearning(set.id, set.cards, this.progress.cards()) : set.cards;
+        this.begin(cards.length ? cards : set.cards, { startAt });
         this.title.setTitle(`Study: ${set.title} · Flashcards`);
       });
     });
+
+    // Record the pass once when the session reaches its summary.
+    effect(() => {
+      if (!this.session.finished() || this.passRecorded) return;
+      this.passRecorded = true;
+      untracked(() => {
+        const s = this.session.summary();
+        const full =
+          this.set.hasValue() && s.total === this.set.value().cards.length && s.skipped === 0;
+        this.applyAward(this.progress.recordStudyPass(this.setId(), full));
+      });
+    });
+  }
+
+  /** Start a new session (resets per-session points). */
+  protected begin(
+    cards: Parameters<StudySession['start']>[0],
+    options: { shuffle?: boolean; startAt?: string } = {},
+  ): void {
+    this.passRecorded = false;
+    this.sessionPoints.set(0);
+    this.session.start(cards, options);
+  }
+
+  protected readonly gradeLearning = () => this.grade('learning');
+  protected readonly gradeKnew = () => this.grade('knew');
+
+  private grade(grade: StudyGrade): void {
+    const card = this.session.current();
+    if (!card || !this.session.flipped()) return;
+    this.session.grade(grade);
+    this.applyAward(this.progress.recordStudyGrade(this.setId(), card.id, grade === 'knew'));
+  }
+
+  private applyAward(award: Award): void {
+    this.sessionPoints.update((p) => p + award.points);
+    this.feedback.announce(award);
   }
 
   /**
@@ -211,13 +266,9 @@ export class StudyPage {
     this.stage()?.nativeElement.focus({ preventScroll: true });
   }
 
-  protected restart(cards: Parameters<StudySession['start']>[0], shuffle = false): void {
-    this.session.start(cards, { shuffle });
-  }
-
   /** Shuffle the whole set and start over. Arrow property so it can be passed to act(). */
   protected readonly reshuffle = (): void => {
-    if (this.set.hasValue()) this.restart(this.set.value().cards, true);
+    if (this.set.hasValue()) this.begin(this.set.value().cards, { shuffle: true });
   };
 
   protected onKeydown(event: KeyboardEvent): void {
@@ -230,10 +281,10 @@ export class StudyPage {
         s.flip();
         break;
       case '1':
-        s.grade('learning');
+        this.grade('learning');
         break;
       case '2':
-        s.grade('knew');
+        this.grade('knew');
         break;
       case 'ArrowRight':
         s.next();

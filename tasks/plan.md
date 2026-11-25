@@ -61,10 +61,10 @@ The detailed tasks, with acceptance criteria, verification and files, are in [to
 
 ### Phase 3: Progress & competition
 
-- [ ] T8: StorageService with versioning, migrations, export/import
-- [ ] T9: Scoring and per-card mastery, wired into study and quiz
-- [ ] T10: Daily goal, streak, and top-bar indicators
-- [ ] T11: Dashboard and leaderboard (best, mastered, gathering dust, heatmap)
+- [x] T8: StorageService with versioning, migrations, export/import
+- [x] T9: Scoring and per-card mastery, wired into study and quiz
+- [x] T10: Daily goal, streak, and top-bar indicators
+- [x] T11: Dashboard and leaderboard (best, mastered, gathering dust, heatmap)
 
 **Checkpoint C:** a full day's loop works and survives reloads, and the e2e tests for scoring and streaks pass. _Review the point values with you._
 

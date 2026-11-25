@@ -1,12 +1,15 @@
 import { A11yModule } from '@angular/cdk/a11y';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { LayoutService } from '../core/layout.service';
+import { approxSetMasteryPct } from '../core/logic/mastery';
+import { ProgressStore } from '../core/progress-store';
+import { ProgressRing } from '../shared/progress-ring';
 import { SetStore } from '../core/set-store';
 
 @Component({
   selector: 'lf-sidebar',
-  imports: [RouterLink, RouterLinkActive, A11yModule],
+  imports: [RouterLink, RouterLinkActive, A11yModule, ProgressRing],
   host: {
     '(document:keydown.escape)': 'onEscape()',
   },
@@ -49,7 +52,7 @@ import { SetStore } from '../core/set-store';
       [class.invisible]="!layout.sidebarOpen()"
       [inert]="!layout.sidebarOpen()"
       [cdkTrapFocus]="layout.isMobile() && layout.sidebarOpen()"
-      [cdkTrapFocusAutoCapture]="true"
+      [cdkTrapFocusAutoCapture]="layout.isMobile() && layout.sidebarOpen()"
       data-testid="sidebar"
     >
       <nav aria-label="Card sets" class="flex h-full w-64 flex-col gap-6 overflow-y-auto p-3">
@@ -82,6 +85,15 @@ import { SetStore } from '../core/set-store';
               >📝 Questions</a
             >
           </li>
+          <li>
+            <a
+              routerLink="/settings"
+              class="nav-link"
+              routerLinkActive="active"
+              (click)="layout.closeIfMobile()"
+              >⚙️ Settings</a
+            >
+          </li>
         </ul>
 
         @switch (sets.status()) {
@@ -109,7 +121,12 @@ import { SetStore } from '../core/set-store';
                       >
                         <span aria-hidden="true">{{ set.emoji }}</span>
                         <span class="min-w-0 flex-1 truncate">{{ set.title }}</span>
-                        <span class="text-xs text-muted tabular-nums">{{ set.cardCount }}</span>
+                        <lf-progress-ring
+                          [value]="mastery()[set.id] ?? 0"
+                          [size]="20"
+                          [stroke]="2.5"
+                          [label]="(mastery()[set.id] ?? 0) + '% mastered'"
+                        />
                       </a>
                     </li>
                   }
@@ -127,6 +144,15 @@ import { SetStore } from '../core/set-store';
 export class Sidebar {
   protected readonly layout = inject(LayoutService);
   protected readonly sets = inject(SetStore);
+  private readonly progress = inject(ProgressStore);
+
+  /** Mastery % per set id, for the sidebar rings. */
+  protected readonly mastery = computed(() => {
+    const cards = this.progress.cards();
+    return Object.fromEntries(
+      this.sets.sets().map((s) => [s.id, approxSetMasteryPct(s.id, s.quizzableCount, cards)]),
+    ) as Record<string, number>;
+  });
 
   protected onEscape(): void {
     this.layout.closeIfMobile();

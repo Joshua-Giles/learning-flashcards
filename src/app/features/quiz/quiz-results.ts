@@ -20,6 +20,20 @@ import { QuizResults } from './quiz-session';
         {{ results().accuracy }}<span class="text-3xl text-muted">%</span>
       </p>
       <p class="text-sm text-muted">accuracy</p>
+      <p class="mt-3 flex flex-wrap gap-2 text-sm">
+        <span
+          class="rounded-full bg-accent/10 px-3 py-1 font-semibold text-accent"
+          data-testid="quiz-points"
+          >+{{ points() }} points</span
+        >
+        @if (personalBest()) {
+          <span
+            class="rounded-full bg-success/10 px-3 py-1 font-semibold text-success"
+            data-testid="personal-best"
+            >🎉 New personal best</span
+          >
+        }
+      </p>
 
       <dl class="mt-6 grid grid-cols-2 gap-3 text-center sm:grid-cols-4">
         <div class="rounded-xl bg-surface-2 p-3">
@@ -80,6 +94,8 @@ import { QuizResults } from './quiz-session';
 export class QuizResultsPanel {
   readonly results = input.required<QuizResults>();
   readonly setId = input.required<string>();
+  readonly points = input(0);
+  readonly personalBest = input(false);
   readonly retryMissed = output<void>();
   readonly again = output<void>();
 

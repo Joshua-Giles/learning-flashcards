@@ -218,6 +218,7 @@ Build order: content → shell → study → quiz → search → progress → no
 **Storage**
 
 - One versioned `localStorage` document, stored under the key `lf:state` (current schema version 1), with migration functions for future versions.
+- UI preferences (theme, sidebar) stay in their own small keys (`lf:theme`, `lf:sidebar-open`), outside the progress document. That keeps the no-flash theme script trivial, and "export progress" covers learning data only. _(Decided during T8.)_
 - Settings has **Export progress** (downloads JSON), **Import progress** (validated before it replaces anything) and **Reset**, which asks me to confirm.
 - If storage is unavailable or full, a clear banner says so instead of failing silently.
 

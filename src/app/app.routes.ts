@@ -31,8 +31,12 @@ export const routes: Routes = [
   {
     path: 'stats',
     title: 'Stats · Flashcards',
-    loadComponent: comingSoon,
-    data: { heading: 'Stats & leaderboard' },
+    loadComponent: () => import('./features/stats/stats-page').then((m) => m.StatsPage),
+  },
+  {
+    path: 'settings',
+    title: 'Settings · Flashcards',
+    loadComponent: () => import('./features/settings/settings-page').then((m) => m.SettingsPage),
   },
   { path: '**', redirectTo: '' },
 ];

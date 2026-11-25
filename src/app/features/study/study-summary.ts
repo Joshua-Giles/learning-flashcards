@@ -14,6 +14,11 @@ import { StudySummary } from './study-session';
       <h2 id="summary-heading" class="text-2xl font-semibold tracking-tight">
         {{ headline() }}
       </h2>
+      @if (points() > 0) {
+        <p class="mt-1 text-sm font-medium text-accent" data-testid="summary-points">
+          +{{ points() }} points
+        </p>
+      }
 
       <dl class="mt-6 grid grid-cols-3 gap-3 text-center">
         <div class="rounded-xl bg-surface-2 p-3">
@@ -65,6 +70,7 @@ import { StudySummary } from './study-session';
 export class StudySummaryPanel {
   readonly summary = input.required<StudySummary>();
   readonly setId = input.required<string>();
+  readonly points = input(0);
   readonly restartMissed = output<void>();
   readonly restartAll = output<void>();
 

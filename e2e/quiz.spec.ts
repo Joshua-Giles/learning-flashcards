@@ -1,23 +1,5 @@
 import { Page, expect, test } from '@playwright/test';
-
-/** Sample-set answers by prompt fragment (quiz order is shuffled). */
-const ANSWERS: [RegExp, string][] = [
-  [/closest to the Sun/, 'Mercury'],
-  [/hottest/, 'Venus'],
-  [/largest planet/, 'Jupiter'],
-  [/Red Planet/, 'Mars'],
-  [/ring system/, 'Saturn'],
-  [/rotates on its side/, 'Uranus'],
-  [/farthest planet/, 'Neptune'],
-  [/dwarf planet/, 'Pluto'],
-];
-
-async function currentAnswer(page: Page): Promise<string> {
-  const prompt = (await page.locator('#quiz-prompt').textContent()) ?? '';
-  const hit = ANSWERS.find(([re]) => re.test(prompt));
-  if (!hit) throw new Error(`Unknown prompt: ${prompt}`);
-  return hit[1];
-}
+import { currentAnswer } from './helpers';
 
 /** Press Enter on the feedback panel and wait until question `n` is showing. */
 async function nextQuestion(page: Page, n: number) {

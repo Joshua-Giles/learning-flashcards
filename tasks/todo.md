@@ -146,12 +146,12 @@ Add one small sample set (about 8 cards) for development.
 
 ### T8: StorageService with versioning, migrations, export/import
 
-**Description:** One `lf:state` document (`{ version, settings, progress, daily, notebook }`) with typed read/write and a migration pipeline (and a test for it). It moves T3's temporary sidebar key into the document. Settings page: Export (downloads JSON), Import (schema-validated before it replaces anything), and Reset (with confirmation). Shows a banner when storage is unavailable.
+**Description:** One `lf:state` document (`{ version, settings, progress, daily, notebook }`) with typed read/write and a migration pipeline (and a test for it). (Theme and sidebar preferences deliberately stay in their own keys; see SPEC F5.) Settings page: Export (downloads JSON), Import (schema-validated before it replaces anything), and Reset (with confirmation). Shows a banner when storage is unavailable.
 **Acceptance criteria:**
 
-- [ ] State survives a reload, and export then import round-trips to an identical state
-- [ ] Bad or old-version imports are rejected or migrated with a clear message
-- [ ] When `localStorage` throws, the app keeps working in memory and shows the banner
+- [x] State survives a reload, and export then import round-trips to an identical state
+- [x] Bad or old-version imports are rejected or migrated with a clear message
+- [x] When `localStorage` throws, the app keeps working in memory and shows the banner
       **Verification:** unit tests (round-trip, migration, bad input, storage throws)
       **Dependencies:** T3
       **Files:** `core/storage.service.ts`, `core/models/state.ts`, `core/logic/migrations.ts`, `features/settings/*`
@@ -168,9 +168,9 @@ Add one small sample set (about 8 cards) for development.
 `ProgressStore` records card outcomes and session results (best accuracy, first completion, mastered date). The quiz switches to real weakest-first ordering. Confetti fires when a set is mastered or a personal best is set.
 **Acceptance criteria:**
 
-- [ ] Every row of the points table is covered by a test, including combos and the hint penalty
-- [ ] Two correct answers on the same day promote a card only once; correct answers on separate days do promote it
-- [ ] A set shows as mastered at ≥ 90% of its quizzable cards at box ≥ 4, and the bonus is awarded only once
+- [x] Every row of the points table is covered by a test, including combos and the hint penalty
+- [x] Two correct answers on the same day promote a card only once; correct answers on separate days do promote it
+- [x] A set shows as mastered at ≥ 90% of its quizzable cards at box ≥ 4, and the bonus is awarded only once
       **Verification:** `npm test -- scoring mastery`; a manual run of a quiz
       **Dependencies:** T7, T8
       **Files:** `core/logic/scoring.ts`, `core/logic/mastery.ts`, `core/progress-store.ts`, plus small hooks in the study and quiz pages (including the "still learning only" study filter moved from T5)
@@ -181,9 +181,9 @@ Add one small sample set (about 8 cards) for development.
 **Description:** Add a `Clock` service and `LocalDay` helpers. Points go into a per-day ledger. A streak counts consecutive local days on which the goal was met. The daily goal setting defaults to 50. The top bar shows today's points ring and 🔥 streak, plus a "keep it alive" state when today's goal isn't met yet.
 **Acceptance criteria:**
 
-- [ ] The streak goes up when the goal is met on consecutive days and resets after a missed day
-- [ ] Midnight and DST transitions are tested with an injected clock
-- [ ] The top bar updates live as points are earned
+- [x] The streak goes up when the goal is met on consecutive days and resets after a missed day
+- [x] Midnight and DST transitions are tested with an injected clock
+- [x] The top bar updates live as points are earned
       **Verification:** `npm test -- streak`; Playwright with a mocked clock: 2 days → streak of 2, a gap → 0
       **Dependencies:** T9
       **Files:** `core/clock.ts`, `core/logic/streak.ts`, `core/logic/local-day.ts`, `shell/top-bar.*`, `e2e/streak.spec.ts`
@@ -197,9 +197,9 @@ Add one small sample set (about 8 cards) for development.
 - `/stats`: best sets ranked, mastered sets with dates, and a 26-week activity heatmap.
 - Sidebar progress rings use the set mastery %.
   **Acceptance criteria:**
-- [ ] Seeded state produces the expected ordering in each list (unit-tested selectors)
-- [ ] A set not studied for ≥ 7 days appears under "gathering dust", stalest first
-- [ ] The heatmap is keyboard-focusable, and each day has a tooltip/aria label with its points
+- [x] Seeded state produces the expected ordering in each list (unit-tested selectors)
+- [x] A set not studied for ≥ 7 days appears under "gathering dust", stalest first
+- [x] The heatmap is keyboard-focusable, and each day has a tooltip/aria label with its points
       **Verification:** unit tests for the selectors; Playwright with seeded localStorage
       **Dependencies:** T10
       **Files:** `core/logic/leaderboard.ts`, `features/dashboard/*`, `features/stats/*`, `shared/heatmap.*`, `shared/progress-ring.*`
@@ -207,8 +207,8 @@ Add one small sample set (about 8 cards) for development.
 
 ### ✅ Checkpoint C: Progress
 
-- [ ] A full day's loop (study → quiz → points → streak) persists across reloads
-- [ ] The scoring, streak and dashboard e2e tests pass
+- [x] A full day's loop (study → quiz → points → streak) persists across reloads
+- [x] The scoring, streak and dashboard e2e tests pass
 - [ ] **Review with you: point values, daily goal, what the dashboard emphasises**
 
 ---

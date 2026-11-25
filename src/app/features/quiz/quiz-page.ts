@@ -15,7 +15,11 @@ import {
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { LucideArrowLeft } from '@lucide/angular';
+import { AwardFeedback } from '../../core/award-feedback';
 import { shouldIgnoreShortcut } from '../../core/keyboard';
+import { orderWeakestFirst } from '../../core/logic/mastery';
+import { POINTS, comboBonus, quizAnswerPoints } from '../../core/logic/scoring';
+import { Award, ProgressStore } from '../../core/progress-store';
 import { Card } from '../../core/models/set';
 import { SetStore } from '../../core/set-store';
 import { MarkdownLite } from '../../shared/markdown-lite';
@@ -86,6 +90,8 @@ import { QuizResultsPanel } from './quiz-results';
         <lf-quiz-results
           [results]="session.results()"
           [setId]="setId()"
+          [points]="quizPoints()"
+          [personalBest]="personalBest()"
           (retryMissed)="begin(undefined, session.results().missedCards)"
           (again)="begin(lastLimit)"
         />
@@ -148,7 +154,7 @@ import { QuizResultsPanel } from './quiz-results';
             class="mt-3 text-sm text-muted underline-offset-2 hover:text-fg hover:underline"
             (click)="session.showHint(); focusInput()"
           >
-            Need a hint?
+            Need a hint? (−{{ hintPenalty }} points)
           </button>
         }
 
@@ -194,6 +200,12 @@ import { QuizResultsPanel } from './quiz-results';
                   }
                 </p>
               }
+            }
+
+            @if (pendingPoints() > 0) {
+              <p class="mt-1 text-sm font-semibold text-accent" data-testid="pending-points">
+                +{{ pendingPoints() }} points
+              </p>
             }
 
             @if (card.details) {
@@ -253,6 +265,12 @@ export class QuizPage {
   protected readonly started = signal(false);
   protected readonly typed = signal('');
   protected lastLimit: number | undefined;
+  private fullQuiz = false;
+  private readonly progress = inject(ProgressStore);
+  private readonly feedback = inject(AwardFeedback);
+  protected readonly quizPoints = signal(0);
+  protected readonly personalBest = signal(false);
+  protected readonly hintPenalty = POINTS.hintPenalty;
 
   private readonly answerInput = viewChild<ElementRef<HTMLInputElement>>('answerInput');
   private readonly nextBtn = viewChild<ElementRef<HTMLButtonElement>>('nextBtn');
@@ -262,9 +280,26 @@ export class QuizPage {
     loader: ({ params }) => this.store.getSet(params),
   });
 
-  protected readonly quizzableCount = computed(() =>
-    this.set.hasValue() ? this.set.value().cards.filter((c) => c.quizzable !== false).length : 0,
+  protected readonly quizzableIds = computed(() =>
+    this.set.hasValue()
+      ? this.set
+          .value()
+          .cards.filter((c) => c.quizzable !== false)
+          .map((c) => c.id)
+      : [],
   );
+  protected readonly quizzableCount = computed(() => this.quizzableIds().length);
+
+  /** Points this answer will earn once you move on (shown in the feedback panel). */
+  protected readonly pendingPoints = computed(() => {
+    const record = this.session.currentRecord();
+    if (!record) return 0;
+    const right = record.outcome !== 'wrong';
+    return (
+      quizAnswerPoints(record.outcome, record.hintUsed) +
+      (right ? comboBonus(this.session.combo()) : 0)
+    );
+  });
 
   protected readonly feedbackTone = computed(() => {
     const outcome = this.session.currentRecord()?.outcome;
@@ -282,10 +317,19 @@ export class QuizPage {
     });
   }
 
+  /**
+   * Start a quiz. Cards are ordered weakest-first (lowest mastery, least recently seen).
+   * Only a quiz over every quizzable card counts towards the set's best accuracy.
+   */
   protected begin(limit?: number, cards?: Card[]): void {
     if (!this.set.hasValue()) return;
+    const set = this.set.value();
     if (!cards) this.lastLimit = limit;
-    this.session.start(cards ?? this.set.value().cards, { limit });
+    this.fullQuiz = !cards && !limit;
+    this.quizPoints.set(0);
+    this.personalBest.set(false);
+    const ordered = orderWeakestFirst(set.id, cards ?? set.cards, this.progress.cards());
+    this.session.start(ordered, { limit, shuffle: false });
     this.typed.set('');
     this.started.set(true);
     this.focusInput();
@@ -301,9 +345,38 @@ export class QuizPage {
   }
 
   protected next(): void {
+    const record = this.session.currentRecord();
+    if (!record) return;
+    // Record only when moving on, so "accept"/"I was right" are reflected.
+    this.applyAward(
+      this.progress.recordQuizAnswer({
+        setId: this.setId(),
+        cardId: record.cardId,
+        outcome: record.outcome,
+        hintUsed: record.hintUsed,
+        combo: this.session.combo(),
+        quizzableIds: this.quizzableIds(),
+      }),
+    );
+
     this.session.next();
     this.typed.set('');
-    if (!this.session.finished()) this.focusInput();
+    if (this.session.finished()) {
+      const award = this.progress.recordQuizFinish(
+        this.setId(),
+        this.session.results().accuracy,
+        this.fullQuiz,
+      );
+      this.personalBest.set(award.personalBest);
+      this.applyAward(award);
+    } else {
+      this.focusInput();
+    }
+  }
+
+  private applyAward(award: Award): void {
+    this.quizPoints.update((p) => p + award.points);
+    this.feedback.announce(award);
   }
 
   protected focusInput(): void {

@@ -137,4 +137,8 @@
   .link {
     @apply text-accent underline-offset-2 hover:underline;
   }
+
+  .set-card {
+    @apply flex h-full flex-col gap-1 rounded-xl border border-line bg-surface p-4 transition hover:-translate-y-0.5 hover:border-accent hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0;
+  }
 }

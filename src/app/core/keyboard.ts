@@ -12,7 +12,8 @@ export function shouldIgnoreShortcut(event: KeyboardEvent): boolean {
     tag === 'TEXTAREA' ||
     tag === 'SELECT' ||
     target.isContentEditable ||
-    // Let Space/Enter activate a focused button or link natively.
-    ((event.key === ' ' || event.key === 'Enter') && (tag === 'BUTTON' || tag === 'A'))
+    // Let a focused button (Space/Enter) or link (Enter) activate natively.
+    (tag === 'BUTTON' && (event.key === ' ' || event.key === 'Enter')) ||
+    (tag === 'A' && event.key === 'Enter')
   );
 }
