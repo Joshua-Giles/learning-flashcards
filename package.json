@@ -14,7 +14,8 @@
     "e2e": "playwright test",
     "sets:check": "node scripts/check-sets.mjs",
     "sets:test": "node --test scripts/check-sets.test.mjs",
-    "verify": "npm run lint && npm run format:check && npm run sets:test && npm run sets:check && npm test && npm run build"
+    "verify": "npm run lint && npm run format:check && npm run sets:test && npm run sets:check && npm test && npm run build",
+    "build:pages": "ng build --base-href /learning-flashcards/ && node scripts/pages-fallback.mjs"
   },
   "private": true,
   "packageManager": "npm@11.21.3",

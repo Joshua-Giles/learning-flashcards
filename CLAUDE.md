@@ -39,7 +39,7 @@ npm run verify       # lint + format check + sets tests + sets check + unit test
 - **Accuracy over flair:** if you're not confident a fact is right, leave it out.
 - Always finish with `npm run sets:check` and fix every error and warning.
 
-CI (`.github/workflows/ci.yml`) runs `npm run verify` and `npm run e2e` on every push and PR.
+CI (`.github/workflows/ci.yml`) runs `npm run verify` and `npm run e2e` on every push and PR. Pushes to `main` that pass are deployed to GitHub Pages (`npm run build:pages`, base href `/learning-flashcards/`). Anything pushed to `main` goes live, so keep `main` green.
 
 ## Boundaries
 

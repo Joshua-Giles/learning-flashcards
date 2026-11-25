@@ -323,8 +323,8 @@ They're travel- and conversation-focused. Use `accept` for common variants and k
 **Description:** A GitHub Actions workflow that runs `npm ci`, `npm run verify` and the Playwright e2e tests on every push and PR. If you choose Pages (Open Question 3), add a deploy job (`base-href`, a `404.html` copy so client-side routes work).
 **Acceptance criteria:**
 
-- [ ] CI is green on main, and a failing test or a broken set file fails CI (workflow added. A broken set fails `npm run verify` locally. Not yet confirmed on GitHub)
-- [ ] (Optional) the app is live on Pages and deep links work on refresh
+- [x] CI is green on main, and a failing test or a broken set file fails CI (the first run passed on GitHub for `37c9489`, and a broken set fails `npm run verify`)
+- [ ] (Optional) the app is live on Pages and deep links work on refresh (deploy job and `npm run build:pages` with a 404.html fallback; deep-link refresh verified against a local Pages simulation)
       **Verification:** a test PR with a deliberately broken set fails, and fixing it passes
       **Dependencies:** T17 (needs your OK, since deployment is "Ask first")
       **Files:** `.github/workflows/ci.yml`, (optional) `.github/workflows/deploy.yml`

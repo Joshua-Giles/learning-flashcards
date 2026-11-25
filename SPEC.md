@@ -397,7 +397,7 @@ Date logic is tested with an injected clock so streaks crossing midnight and DST
 
 ## Open Questions
 
-_Still open after V1:_ hosting (Q3). Everything else was answered or the default was accepted.
+_All resolved._ Hosting (Q3): **GitHub Pages**, deployed by the CI workflow after a green build on `main` (the repo is public). Everything else was answered or the default was accepted.
 
 _Resolved: Angular 22 confirmed. The album is_ We Were Dead Before the Ship Even Sank*, and music sets focus on the band (see F8).*
 

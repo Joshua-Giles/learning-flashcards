@@ -6,6 +6,8 @@ A personal flashcard app for learning anything: bands, movies, languages. You fl
 
 Built with Angular 22, Tailwind CSS v4 and Angular CDK. Card sets are plain JSON files in [`public/sets/`](public/sets), and everything else stays in your browser.
 
+**Live app:** https://joshua-giles.github.io/learning-flashcards/ (deployed automatically from `main` after CI passes). Progress is stored per browser; use **Settings → Export/Import** to move it between devices.
+
 ## Getting started
 
 ```bash
