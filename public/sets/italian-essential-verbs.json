@@ -5,9 +5,10 @@
   "title": "Italian: Essere, Avere & Friends",
   "description": "The two verbs everything else leans on, plus a handful of everyday action words and some classic \"avere\" expressions.",
   "category": "Languages",
+  "group": "Italian",
   "emoji": "🗣️",
   "tags": ["italian", "beginner", "verbs", "grammar"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

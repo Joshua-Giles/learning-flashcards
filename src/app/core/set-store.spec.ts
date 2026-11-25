@@ -4,7 +4,12 @@ import { TestBed } from '@angular/core/testing';
 import { CardSet, SetSummary } from './models/set';
 import { SetStore } from './set-store';
 
-function summary(id: string, category: string, title: string): SetSummary {
+function summary(
+  id: string,
+  category: string,
+  title: string,
+  extra: Partial<SetSummary> = {},
+): SetSummary {
   return {
     id,
     title,
@@ -16,6 +21,7 @@ function summary(id: string, category: string, title: string): SetSummary {
     updated: '2026-11-24',
     cardCount: 1,
     quizzableCount: 1,
+    ...extra,
   };
 }
 
@@ -48,7 +54,29 @@ describe('SetStore', () => {
     expect(store.status()).toBe('ready');
     expect(store.categories().map((c) => c.name)).toEqual(['Languages', 'Music']);
     expect(store.categories()[0].sets.map((s) => s.id)).toEqual(['it-a', 'it-b']);
+    expect(store.categories()[0].groups).toEqual([]);
     expect(store.summary('mm')?.title).toBe('Modest Mouse');
+  });
+
+  it('nests grouped sets under their group, main set before albums', async () => {
+    const done = store.loadManifest();
+    http.expectOne('sets/index.json').flush({
+      sets: [
+        summary('nd-pink', 'Music', 'Nick Drake: Pink Moon', {
+          group: 'Nick Drake',
+          tags: ['album'],
+        }),
+        summary('nd', 'Music', 'Nick Drake: The Artist', { group: 'Nick Drake' }),
+        summary('es', 'Music', 'Elliott Smith: The Artist', { group: 'Elliott Smith' }),
+        summary('misc', 'Music', 'Music Theory Basics'),
+      ],
+    });
+    await done;
+
+    const music = store.categories()[0];
+    expect(music.groups.map((g) => g.name)).toEqual(['Elliott Smith', 'Nick Drake']);
+    expect(music.groups[1].sets.map((s) => s.id)).toEqual(['nd', 'nd-pink']);
+    expect(music.sets.map((s) => s.id)).toEqual(['misc']);
   });
 
   it('reports an error status instead of throwing when the manifest fails', async () => {

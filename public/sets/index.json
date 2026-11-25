@@ -5,6 +5,7 @@
       "title": "Italian: At the Café & Restaurant",
       "description": "Order coffee like a local, read a menu, and ask for the bill, plus the unwritten rules (cappuccino after lunch? Never!).",
       "category": "Languages",
+      "group": "Italian",
       "emoji": "☕",
       "tags": [
         "italian",
@@ -13,7 +14,7 @@
         "café",
         "restaurant"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 30,
       "quizzableCount": 30
@@ -23,6 +24,7 @@
       "title": "Italian: Essere, Avere & Friends",
       "description": "The two verbs everything else leans on, plus a handful of everyday action words and some classic \"avere\" expressions.",
       "category": "Languages",
+      "group": "Italian",
       "emoji": "🗣️",
       "tags": [
         "italian",
@@ -30,7 +32,7 @@
         "verbs",
         "grammar"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 25,
       "quizzableCount": 25
@@ -40,6 +42,7 @@
       "title": "Italian: Getting Around",
       "description": "Trains, tickets, directions, hotels and signs: the words that get you from the airport to your dinner table.",
       "category": "Languages",
+      "group": "Italian",
       "emoji": "🚆",
       "tags": [
         "italian",
@@ -47,7 +50,7 @@
         "travel",
         "directions"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 25,
       "quizzableCount": 25
@@ -57,6 +60,7 @@
       "title": "Italian: Greetings & Basics",
       "description": "Ciao! The phrases you'll use in your first hour in Italy: hellos, goodbyes, thanks and polite survival lines.",
       "category": "Languages",
+      "group": "Italian",
       "emoji": "👋",
       "tags": [
         "italian",
@@ -64,7 +68,7 @@
         "greetings",
         "phrases"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 30,
       "quizzableCount": 30
@@ -74,6 +78,7 @@
       "title": "Italian: Numbers, Days & Time",
       "description": "Count, tell the day and talk about today, tomorrow and yesterday. Plus why Italian weekdays are named after planets.",
       "category": "Languages",
+      "group": "Italian",
       "emoji": "🔢",
       "tags": [
         "italian",
@@ -82,16 +87,107 @@
         "time",
         "days"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 30,
       "quizzableCount": 30
+    },
+    {
+      "id": "elliott-smith-either-or",
+      "title": "Elliott Smith: Either/Or",
+      "description": "His 1997 masterpiece: the title, the songs and the film that carried them to the world.",
+      "category": "Music",
+      "group": "Elliott Smith",
+      "emoji": "🌹",
+      "tags": [
+        "music",
+        "singer-songwriter",
+        "elliott smith",
+        "album"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 12,
+      "quizzableCount": 12
+    },
+    {
+      "id": "elliott-smith-artist",
+      "title": "Elliott Smith: The Artist",
+      "description": "From Portland basements to the Oscars stage: the whispered songs, the albums and the life of Elliott Smith.",
+      "category": "Music",
+      "group": "Elliott Smith",
+      "emoji": "🎙️",
+      "tags": [
+        "music",
+        "singer-songwriter",
+        "indie folk",
+        "elliott smith"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 21,
+      "quizzableCount": 21
+    },
+    {
+      "id": "foo-fighters-band",
+      "title": "Foo Fighters: The Band",
+      "description": "From one man's demo tapes after Nirvana to stadium rock royalty: Dave Grohl's band, its members and its records.",
+      "category": "Music",
+      "group": "Foo Fighters",
+      "emoji": "🛸",
+      "tags": [
+        "music",
+        "rock",
+        "alternative rock",
+        "foo fighters"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 29,
+      "quizzableCount": 29
+    },
+    {
+      "id": "geese-band",
+      "title": "Geese: The Band",
+      "description": "Brooklyn's restless young rock band: the basics. A small starter set, so add your questions and it will grow.",
+      "category": "Music",
+      "group": "Geese",
+      "emoji": "🪿",
+      "tags": [
+        "music",
+        "indie rock",
+        "geese",
+        "brooklyn"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 9,
+      "quizzableCount": 9
+    },
+    {
+      "id": "mj-lenderman-artist",
+      "title": "MJ Lenderman: The Artist",
+      "description": "North Carolina's wry, wobbly-guitar songwriter: where he's from, the band he played in and the records. A small starter set, so add your questions and it will grow.",
+      "category": "Music",
+      "group": "MJ Lenderman",
+      "emoji": "🤠",
+      "tags": [
+        "music",
+        "alt-country",
+        "indie rock",
+        "mj lenderman"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 9,
+      "quizzableCount": 9
     },
     {
       "id": "modest-mouse-band",
       "title": "Modest Mouse: The Band",
       "description": "From a small town outside Seattle to a No. 1 album: the people, the records and the stories behind Modest Mouse.",
       "category": "Music",
+      "group": "Modest Mouse",
       "emoji": "🐭",
       "tags": [
         "music",
@@ -99,7 +195,7 @@
         "modest mouse",
         "pacific northwest"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 39,
       "quizzableCount": 39
@@ -109,6 +205,7 @@
       "title": "Modest Mouse: We Were Dead Before the Ship Even Sank",
       "description": "A companion to the band set: the highlights, key tracks and stories behind the 2007 album that went to No. 1.",
       "category": "Music",
+      "group": "Modest Mouse",
       "emoji": "🚢",
       "tags": [
         "music",
@@ -116,10 +213,84 @@
         "modest mouse",
         "album"
       ],
-      "version": 1,
+      "version": 2,
       "updated": "2026-11-25",
       "cardCount": 13,
       "quizzableCount": 13
+    },
+    {
+      "id": "nick-drake-pink-moon",
+      "title": "Nick Drake: Pink Moon",
+      "description": "His last album: under half an hour of voice and guitar, and one of the most haunting records ever made.",
+      "category": "Music",
+      "group": "Nick Drake",
+      "emoji": "🌸",
+      "tags": [
+        "music",
+        "folk",
+        "nick drake",
+        "album"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 11,
+      "quizzableCount": 11
+    },
+    {
+      "id": "nick-drake-artist",
+      "title": "Nick Drake: The Artist",
+      "description": "Three albums, barely noticed in his lifetime, now treasured: the life, the records and the people behind Nick Drake's quiet music.",
+      "category": "Music",
+      "group": "Nick Drake",
+      "emoji": "🍂",
+      "tags": [
+        "music",
+        "folk",
+        "singer-songwriter",
+        "nick drake"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 20,
+      "quizzableCount": 20
+    },
+    {
+      "id": "sun-kil-moon-band",
+      "title": "Sun Kil Moon: The Band",
+      "description": "Mark Kozelek's long-running project: from Red House Painters' slowcore to the diary-like songs of Benji.",
+      "category": "Music",
+      "group": "Sun Kil Moon",
+      "emoji": "🥊",
+      "tags": [
+        "music",
+        "folk",
+        "slowcore",
+        "indie",
+        "sun kil moon"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 19,
+      "quizzableCount": 19
+    },
+    {
+      "id": "the-strokes-band",
+      "title": "The Strokes: The Band",
+      "description": "Five New Yorkers in leather jackets who made rock cool again in 2001: the members, the albums and the stories.",
+      "category": "Music",
+      "group": "The Strokes",
+      "emoji": "🎸",
+      "tags": [
+        "music",
+        "indie rock",
+        "garage rock",
+        "the strokes",
+        "new york"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 32,
+      "quizzableCount": 32
     },
     {
       "id": "sample-solar-system",

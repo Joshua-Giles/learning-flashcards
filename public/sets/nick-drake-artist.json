@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "nick-drake-artist",
+  "title": "Nick Drake: The Artist",
+  "description": "Three albums, barely noticed in his lifetime, now treasured: the life, the records and the people behind Nick Drake's quiet music.",
+  "category": "Music",
+  "group": "Nick Drake",
+  "emoji": "🍂",
+  "tags": ["music", "folk", "singer-songwriter", "nick drake"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "Nick Drake was a singer-songwriter from which country?",
+      "answer": "England",
+      "accept": ["UK", "United Kingdom", "Britain", "English"],
+      "details": "His music is often described as quintessentially English: pastoral, misty and understated."
+    },
+    {
+      "id": "c002",
+      "prompt": "Nick Drake was born in 1948 in Rangoon, in which country?",
+      "answer": "Burma",
+      "accept": ["Myanmar"],
+      "details": "His father worked there as an engineer. The family moved back to England when Nick was a small child."
+    },
+    {
+      "id": "c003",
+      "prompt": "In which Warwickshire village did Nick Drake grow up?",
+      "answer": "Tanworth-in-Arden",
+      "accept": ["Tanworth in Arden", "Tanworth"],
+      "details": "The family home, Far Leys, is where he made many home recordings, and where he spent his final years."
+    },
+    {
+      "id": "c004",
+      "prompt": "Which university did Nick Drake attend (and leave before graduating)?",
+      "answer": "Cambridge",
+      "accept": ["University of Cambridge", "Cambridge University", "Fitzwilliam College"],
+      "details": "He studied English literature there, but left to focus on music before finishing his degree."
+    },
+    {
+      "id": "c005",
+      "prompt": "How many studio albums did Nick Drake release in his lifetime?",
+      "answer": "Three",
+      "accept": ["3"],
+      "details": "All three sold poorly at the time. Their reputation grew enormously after his death."
+    },
+    {
+      "id": "c006",
+      "prompt": "What is Nick Drake's 1969 debut album?",
+      "answer": "Five Leaves Left",
+      "details": "Gentle guitar and voice wrapped in beautiful string arrangements."
+    },
+    {
+      "id": "c007",
+      "prompt": "The title Five Leaves Left comes from a warning printed in packets of what?",
+      "answer": "Rolling papers",
+      "accept": ["cigarette papers", "rizla", "cigarette rolling papers"],
+      "details": "Near the end of a packet of rolling papers, a slip warned that only five leaves were left."
+    },
+    {
+      "id": "c008",
+      "prompt": "Which friend from Cambridge wrote the string arrangements on Five Leaves Left?",
+      "answer": "Robert Kirby",
+      "accept": ["Kirby"],
+      "details": "His lush, sympathetic strings are a big part of why the album sounds so timeless."
+    },
+    {
+      "id": "c009",
+      "prompt": "Which Five Leaves Left song, with a hypnotic string arrangement, is often named among his finest?",
+      "answer": "River Man",
+      "details": "Unusually for Drake, its strings were arranged by Harry Robinson rather than Robert Kirby."
+    },
+    {
+      "id": "c010",
+      "prompt": "Which American-born producer signed Nick Drake and produced his first two albums?",
+      "answer": "Joe Boyd",
+      "accept": ["Boyd"],
+      "details": "Boyd also produced Fairport Convention and the Incredible String Band, and was a champion of Drake's music."
+    },
+    {
+      "id": "c011",
+      "prompt": "On which record label were all three of Nick Drake's albums released?",
+      "answer": "Island Records",
+      "accept": ["Island"],
+      "details": "Island was the home of much of the British folk-rock scene at the time."
+    },
+    {
+      "id": "c012",
+      "prompt": "What is Nick Drake's second album, with full-band arrangements?",
+      "answer": "Bryter Layter",
+      "details": "His most \"produced\" record, with a full band, brass and strings. The title is a twist on \"brighter later\"."
+    },
+    {
+      "id": "c013",
+      "prompt": "Which former Velvet Underground member played on Bryter Layter?",
+      "answer": "John Cale",
+      "accept": ["Cale"],
+      "details": "Cale added piano, celeste and more, most famously on \"Northern Sky\"."
+    },
+    {
+      "id": "c014",
+      "prompt": "Which Bryter Layter song, featuring John Cale, is often called one of the most beautiful love songs ever written?",
+      "answer": "Northern Sky",
+      "details": "One of the rare moments of pure joy in his catalogue."
+    },
+    {
+      "id": "c015",
+      "prompt": "Bryter Layter has two songs sharing which name, numbered I and II?",
+      "answer": "Hazey Jane",
+      "details": "Confusingly, \"Hazey Jane II\" comes before \"Hazey Jane I\" on the album."
+    },
+    {
+      "id": "c016",
+      "prompt": "What is Nick Drake's third and final album?",
+      "answer": "Pink Moon",
+      "details": "Stark and short: just voice and guitar. See the Pink Moon set for the full story."
+    },
+    {
+      "id": "c017",
+      "prompt": "Drake was known for playing guitar in unusual what?",
+      "answer": "Tunings",
+      "accept": ["open tunings", "alternate tunings", "tuning"],
+      "details": "He re-tuned his guitar for many songs, which is partly why his intricate parts are so hard to copy."
+    },
+    {
+      "id": "c018",
+      "prompt": "Nick Drake's older sister became a well-known actress. What is her name?",
+      "answer": "Gabrielle Drake",
+      "accept": ["Gabrielle"],
+      "details": "She later helped look after his musical legacy."
+    },
+    {
+      "id": "c019",
+      "prompt": "In what year did Nick Drake die, aged 26?",
+      "answer": "1974",
+      "details": "He died at home of an overdose of antidepressants. He had struggled with depression for years."
+    },
+    {
+      "id": "c020",
+      "prompt": "A 2000 TV advert for which car brand introduced Nick Drake to a huge new audience?",
+      "answer": "Volkswagen",
+      "accept": ["VW"],
+      "details": "The ad used \"Pink Moon\", and his record sales jumped dramatically, decades after his death."
+    }
+  ]
+}

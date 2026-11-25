@@ -5,9 +5,10 @@
   "title": "Italian: Numbers, Days & Time",
   "description": "Count, tell the day and talk about today, tomorrow and yesterday. Plus why Italian weekdays are named after planets.",
   "category": "Languages",
+  "group": "Italian",
   "emoji": "🔢",
   "tags": ["italian", "beginner", "numbers", "time", "days"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

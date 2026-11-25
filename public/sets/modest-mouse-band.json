@@ -5,9 +5,10 @@
   "title": "Modest Mouse: The Band",
   "description": "From a small town outside Seattle to a No. 1 album: the people, the records and the stories behind Modest Mouse.",
   "category": "Music",
+  "group": "Modest Mouse",
   "emoji": "🐭",
   "tags": ["music", "indie rock", "modest mouse", "pacific northwest"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

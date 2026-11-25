@@ -1,0 +1,75 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "geese-band",
+  "title": "Geese: The Band",
+  "description": "Brooklyn's restless young rock band: the basics. A small starter set, so add your questions and it will grow.",
+  "category": "Music",
+  "group": "Geese",
+  "emoji": "🪿",
+  "tags": ["music", "indie rock", "geese", "brooklyn"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "Which New York borough is Geese from?",
+      "answer": "Brooklyn",
+      "accept": ["New York", "NYC"],
+      "details": "They started out as teenagers in Brooklyn, making music together before they'd finished school."
+    },
+    {
+      "id": "c002",
+      "prompt": "Geese started as a group of friends at what stage of school?",
+      "answer": "High school",
+      "accept": ["high school", "secondary school"],
+      "details": "They were still teenagers when labels came calling, which is very unusual for an indie band."
+    },
+    {
+      "id": "c003",
+      "prompt": "Who is Geese's singer?",
+      "answer": "Cameron Winter",
+      "accept": ["Winter"],
+      "details": "His theatrical, unpredictable vocals are one of the most distinctive things about the band."
+    },
+    {
+      "id": "c004",
+      "prompt": "Geese are usually filed under which broad genre?",
+      "answer": "Indie rock",
+      "accept": ["rock", "post-punk", "art rock"],
+      "details": "Their sound has moved a lot, from angular post-punk toward looser, stranger rock."
+    },
+    {
+      "id": "c005",
+      "prompt": "What is Geese's 2021 debut album?",
+      "answer": "Projector",
+      "details": "Tense, wiry rock that drew comparisons to The Strokes and Talking Heads."
+    },
+    {
+      "id": "c006",
+      "prompt": "Which independent label released Projector?",
+      "answer": "Partisan Records",
+      "accept": ["Partisan"],
+      "details": "Partisan is a New York indie label that also works with bands like Fontaines D.C."
+    },
+    {
+      "id": "c007",
+      "prompt": "What is Geese's 2023 second album, with a twangy, Americana-flavoured title?",
+      "answer": "3D Country",
+      "accept": ["3-D Country", "three d country"],
+      "details": "Looser, wilder and more playful than the debut: a big swing in style."
+    },
+    {
+      "id": "c008",
+      "prompt": "What is Cameron Winter's 2024 solo album, despite its title a quiet, intimate record?",
+      "answer": "Heavy Metal",
+      "details": "The title is a wink: it's a quiet, intimate record, nothing like heavy metal."
+    },
+    {
+      "id": "c009",
+      "prompt": "What is Geese's 2025 album?",
+      "answer": "Getting Killed",
+      "details": "Their third studio album, following Projector and 3D Country."
+    }
+  ]
+}

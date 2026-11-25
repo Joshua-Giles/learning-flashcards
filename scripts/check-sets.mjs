@@ -137,6 +137,7 @@ export function checkSets(setsDir = DEFAULT_SETS_DIR) {
         title: data.title,
         description: data.description,
         category: data.category,
+        ...(data.group ? { group: data.group } : {}),
         emoji: data.emoji,
         tags: data.tags,
         version: data.version,

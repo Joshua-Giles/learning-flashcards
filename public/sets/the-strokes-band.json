@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "the-strokes-band",
+  "title": "The Strokes: The Band",
+  "description": "Five New Yorkers in leather jackets who made rock cool again in 2001: the members, the albums and the stories.",
+  "category": "Music",
+  "group": "The Strokes",
+  "emoji": "🎸",
+  "tags": ["music", "indie rock", "garage rock", "the strokes", "new york"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "In which city did The Strokes form?",
+      "answer": "New York City",
+      "accept": ["New York", "NYC", "Manhattan"],
+      "details": "The Strokes were so tied to downtown Manhattan that the city is practically a sixth member of the band."
+    },
+    {
+      "id": "c002",
+      "prompt": "Who is The Strokes' singer and main songwriter?",
+      "answer": "Julian Casablancas",
+      "accept": ["Casablancas"],
+      "details": "His lazy, deliberately distorted croon is one of the band's signature sounds."
+    },
+    {
+      "id": "c003",
+      "prompt": "Which Strokes guitarist, known for his white Stratocaster, shares his name with his famous songwriter father?",
+      "answer": "Albert Hammond Jr.",
+      "accept": ["Albert Hammond Jr", "Albert Hammond Junior", "Albert Hammond"],
+      "details": "His dad, Albert Hammond, wrote \"It Never Rains in Southern California\"."
+    },
+    {
+      "id": "c004",
+      "prompt": "Who is The Strokes' other guitarist, famous for the intricate lead parts?",
+      "answer": "Nick Valensi",
+      "accept": ["Valensi"],
+      "details": "The two-guitar interplay between Valensi and Hammond Jr., tight and interlocking with no flashy solos, defines the band's sound."
+    },
+    {
+      "id": "c005",
+      "prompt": "Who plays bass in The Strokes?",
+      "answer": "Nikolai Fraiture",
+      "accept": ["Fraiture"],
+      "details": "The quietest Stroke, with the steady, melodic basslines that hold the whole machine together."
+    },
+    {
+      "id": "c006",
+      "prompt": "Who is The Strokes' drummer?",
+      "answer": "Fabrizio Moretti",
+      "accept": ["Moretti", "Fab Moretti"],
+      "details": "Known for metronome-tight, almost drum-machine-like playing that gives the songs their propulsive feel."
+    },
+    {
+      "id": "c007",
+      "prompt": "At which Swiss boarding school did Julian Casablancas and Albert Hammond Jr. first meet?",
+      "answer": "Le Rosey",
+      "accept": ["Institut Le Rosey"],
+      "details": "One of the world's most famous (and expensive) boarding schools. They reconnected years later in New York."
+    },
+    {
+      "id": "c008",
+      "prompt": "Julian Casablancas' father founded which famous modelling agency?",
+      "answer": "Elite Model Management",
+      "accept": ["Elite", "Elite Models"],
+      "details": "John Casablancas founded Elite, one of the biggest modelling agencies of the supermodel era."
+    },
+    {
+      "id": "c009",
+      "prompt": "What is The Strokes' 2001 debut album?",
+      "answer": "Is This It",
+      "details": "Eleven songs in about 36 minutes. Often called one of the defining albums of the decade. No question mark in the title!"
+    },
+    {
+      "id": "c010",
+      "prompt": "Who produced Is This It?",
+      "answer": "Gordon Raphael",
+      "accept": ["Raphael"],
+      "details": "Recorded in a small Manhattan basement studio. The raw, compressed sound was a deliberate choice."
+    },
+    {
+      "id": "c011",
+      "prompt": "Which British indie label released Is This It in the UK?",
+      "answer": "Rough Trade",
+      "details": "The band broke in the UK first, where the music press went wild for them before America caught on."
+    },
+    {
+      "id": "c012",
+      "prompt": "Which song was removed from the US release of Is This It after the September 11 attacks?",
+      "answer": "New York City Cops",
+      "details": "It was replaced by \"When It Started\". The original UK version kept it."
+    },
+    {
+      "id": "c013",
+      "prompt": "The US cover of Is This It replaced the UK cover's provocative photo with an image of what?",
+      "answer": "Particle tracks",
+      "accept": ["subatomic particles", "bubble chamber", "particle collisions"],
+      "details": "The UK cover showed a gloved hand on a bare hip. The US version swapped it for colourful subatomic particle tracks from a bubble chamber."
+    },
+    {
+      "id": "c014",
+      "prompt": "Which Is This It single became The Strokes' breakthrough hit in 2001?",
+      "answer": "Last Nite",
+      "accept": ["Last Night"],
+      "details": "Spelled \"Nite\". One of the songs that defined early-2000s indie rock."
+    },
+    {
+      "id": "c015",
+      "prompt": "Which nostalgic Is This It single shares its name with a word for \"at some point in the future\"?",
+      "answer": "Someday",
+      "details": "A breezy, bittersweet song about friendship, and one of the band's most loved."
+    },
+    {
+      "id": "c016",
+      "prompt": "The Strokes helped lead the early-2000s revival of which rock style?",
+      "answer": "Garage rock",
+      "accept": ["post-punk", "garage rock revival", "indie rock", "post-punk revival"],
+      "details": "Along with bands like The White Stripes and Yeah Yeah Yeahs, they made scrappy guitar bands huge again."
+    },
+    {
+      "id": "c017",
+      "prompt": "Which music magazine named Is This It the best album of the 2000s?",
+      "answer": "NME",
+      "accept": ["New Musical Express"],
+      "details": "The British weekly championed the band from their very first EP."
+    },
+    {
+      "id": "c018",
+      "prompt": "What is The Strokes' 2003 second album?",
+      "answer": "Room on Fire",
+      "details": "Made quickly after the debut's success, and it sounds like a slightly sharper, slicker sequel."
+    },
+    {
+      "id": "c019",
+      "prompt": "What was the lead single from Room on Fire, named after a time on the clock?",
+      "answer": "12:51",
+      "accept": ["1251", "twelve fifty one"],
+      "details": "Known for a guitar part that sounds more like a synthesizer than a guitar."
+    },
+    {
+      "id": "c020",
+      "prompt": "Which Room on Fire single is named after a class of animals including lizards and snakes?",
+      "answer": "Reptilia",
+      "details": "A fan favourite. Its tense, driving riff is a staple at Strokes shows."
+    },
+    {
+      "id": "c021",
+      "prompt": "What is The Strokes' 2006 third album?",
+      "answer": "First Impressions of Earth",
+      "details": "Longer, louder and more polished than the first two, with a more mixed reception at the time."
+    },
+    {
+      "id": "c022",
+      "prompt": "Which heavy, bass-driven single led First Impressions of Earth?",
+      "answer": "Juicebox",
+      "details": "A big change from the earlier sound, with a snarling bass riff out front."
+    },
+    {
+      "id": "c023",
+      "prompt": "What is The Strokes' 2011 fourth album?",
+      "answer": "Angles",
+      "details": "Their first album after a five-year gap, and the first with songwriting spread across the band."
+    },
+    {
+      "id": "c024",
+      "prompt": "What is The Strokes' 2013 fifth album?",
+      "answer": "Comedown Machine",
+      "details": "Synthy and falsetto-heavy. The band did very little promotion for it."
+    },
+    {
+      "id": "c025",
+      "prompt": "What is The Strokes' 2020 album, which won a Grammy?",
+      "answer": "The New Abnormal",
+      "accept": ["New Abnormal"],
+      "details": "It won Best Rock Album, the band's first Grammy, nearly 20 years after their debut."
+    },
+    {
+      "id": "c026",
+      "prompt": "Which famous producer worked with The Strokes on The New Abnormal?",
+      "answer": "Rick Rubin",
+      "accept": ["Rubin"],
+      "details": "The co-founder of Def Jam, who has produced everyone from the Beastie Boys to Johnny Cash."
+    },
+    {
+      "id": "c027",
+      "prompt": "Which song opens The New Abnormal?",
+      "answer": "The Adults Are Talking",
+      "accept": ["Adults Are Talking"],
+      "details": "A smooth, wistful opener that many fans count among their best songs."
+    },
+    {
+      "id": "c028",
+      "prompt": "Which New Abnormal closing track is named after a New York baseball team?",
+      "answer": "Ode to the Mets",
+      "details": "A melancholy, sweeping goodbye to an era. The perfect closer."
+    },
+    {
+      "id": "c029",
+      "prompt": "\"Bad Decisions\" borrows its melody from which Billy Idol song?",
+      "answer": "Dancing with Myself",
+      "details": "The borrowing is so clear that Billy Idol and Tony James got songwriting credits."
+    },
+    {
+      "id": "c030",
+      "prompt": "What is Julian Casablancas' experimental side band called?",
+      "answer": "The Voidz",
+      "accept": ["Voidz", "Julian Casablancas and the Voidz"],
+      "details": "Much noisier and weirder than The Strokes. Casablancas uses it to chase stranger sounds."
+    },
+    {
+      "id": "c031",
+      "prompt": "Which breezy side project did drummer Fabrizio Moretti form with Rodrigo Amarante?",
+      "answer": "Little Joy",
+      "details": "A sunny, bossa-nova-tinged band. About as far from The Strokes' edge as you can get."
+    },
+    {
+      "id": "c032",
+      "prompt": "What was Albert Hammond Jr.'s 2006 debut solo album?",
+      "answer": "Yours to Keep",
+      "details": "He was the first Stroke to go solo, with brighter, poppier songs."
+    }
+  ]
+}

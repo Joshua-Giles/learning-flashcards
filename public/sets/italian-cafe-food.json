@@ -5,9 +5,10 @@
   "title": "Italian: At the Café & Restaurant",
   "description": "Order coffee like a local, read a menu, and ask for the bill, plus the unwritten rules (cappuccino after lunch? Never!).",
   "category": "Languages",
+  "group": "Italian",
   "emoji": "☕",
   "tags": ["italian", "beginner", "food", "café", "restaurant"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

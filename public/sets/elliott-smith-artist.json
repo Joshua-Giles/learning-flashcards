@@ -1,0 +1,153 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "elliott-smith-artist",
+  "title": "Elliott Smith: The Artist",
+  "description": "From Portland basements to the Oscars stage: the whispered songs, the albums and the life of Elliott Smith.",
+  "category": "Music",
+  "group": "Elliott Smith",
+  "emoji": "🎙️",
+  "tags": ["music", "singer-songwriter", "indie folk", "elliott smith"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "What was Elliott Smith's birth name?",
+      "answer": "Steven Paul Smith",
+      "accept": ["Steven Smith", "Steve Smith"],
+      "details": "He started going by Elliott as a teenager, and the name stuck."
+    },
+    {
+      "id": "c002",
+      "prompt": "In which US city was Elliott Smith born, in 1969?",
+      "answer": "Omaha",
+      "accept": ["Omaha, Nebraska"],
+      "details": "He grew up mainly in Texas before moving to Oregon as a teenager."
+    },
+    {
+      "id": "c003",
+      "prompt": "Elliott Smith is most closely associated with which Pacific Northwest city?",
+      "answer": "Portland",
+      "accept": ["Portland, Oregon"],
+      "details": "He went to high school and made his first records there. Portland landmarks show up in his songs."
+    },
+    {
+      "id": "c004",
+      "prompt": "Which loud Portland rock band was Elliott Smith in before going solo?",
+      "answer": "Heatmiser",
+      "details": "Much heavier than his solo work. He wrote quiet acoustic songs on the side, which became his real calling."
+    },
+    {
+      "id": "c005",
+      "prompt": "Who co-founded Heatmiser with Elliott Smith?",
+      "answer": "Neil Gust",
+      "accept": ["Gust"],
+      "details": "The two had met at college and shared songwriting duties in the band."
+    },
+    {
+      "id": "c006",
+      "prompt": "What is Elliott Smith's 1994 debut solo album?",
+      "answer": "Roman Candle",
+      "details": "Recorded at home on a four-track. He reportedly didn't intend it for release at first."
+    },
+    {
+      "id": "c007",
+      "prompt": "Which Olympia, Washington indie label released his second and third albums?",
+      "answer": "Kill Rock Stars",
+      "details": "A key label of the '90s Northwest underground, also home to Sleater-Kinney."
+    },
+    {
+      "id": "c008",
+      "prompt": "What is the title of Elliott Smith's 1995 second album?",
+      "answer": "Elliott Smith",
+      "accept": ["self-titled"],
+      "details": "A self-titled record of stark, dark acoustic songs that built his cult following."
+    },
+    {
+      "id": "c009",
+      "prompt": "What is Elliott Smith's 1997 third album, titled after a Kierkegaard book?",
+      "answer": "Either/Or",
+      "accept": ["Either Or"],
+      "details": "Many fans' favourite. See the Either/Or set for the full story."
+    },
+    {
+      "id": "c010",
+      "prompt": "Which 1997 film used several Elliott Smith songs and launched him to wider fame?",
+      "answer": "Good Will Hunting",
+      "details": "Director Gus Van Sant was a fan and a fellow Portland resident."
+    },
+    {
+      "id": "c011",
+      "prompt": "Which Elliott Smith song from Good Will Hunting was nominated for an Oscar?",
+      "answer": "Miss Misery",
+      "details": "He performed it at the 1998 Academy Awards in a white suit. It lost to Titanic's \"My Heart Will Go On\"."
+    },
+    {
+      "id": "c012",
+      "prompt": "Who directed Good Will Hunting?",
+      "answer": "Gus Van Sant",
+      "accept": ["Van Sant"],
+      "details": "A Portland-based filmmaker who championed Smith's music."
+    },
+    {
+      "id": "c013",
+      "prompt": "What is Elliott Smith's 1998 major-label debut album?",
+      "answer": "XO",
+      "details": "Lusher and more Beatles-inspired, with piano, horns and strings, but still unmistakably him."
+    },
+    {
+      "id": "c014",
+      "prompt": "Which XO single has a waltz rhythm and a number in its title?",
+      "answer": "Waltz #2 (XO)",
+      "accept": ["Waltz #2", "Waltz 2", "Waltz number 2"],
+      "details": "One of his best-known songs, built on a woozy 3/4 rhythm."
+    },
+    {
+      "id": "c015",
+      "prompt": "Which band was Elliott Smith's biggest musical influence and lifelong obsession?",
+      "answer": "The Beatles",
+      "accept": ["Beatles"],
+      "details": "You can hear it in his melodies and harmonies, especially on XO and Figure 8."
+    },
+    {
+      "id": "c016",
+      "prompt": "Smith's soft vocals were often layered using which recording technique?",
+      "answer": "Double tracking",
+      "accept": ["double-tracking", "double tracked vocals", "overdubbing"],
+      "details": "Singing each line twice and stacking them gives his voice that ghostly, close-up feel."
+    },
+    {
+      "id": "c017",
+      "prompt": "What is Elliott Smith's 2000 album, the last released in his lifetime?",
+      "answer": "Figure 8",
+      "accept": ["Figure Eight"],
+      "details": "His most ambitious, full-band record. Parts were recorded at Abbey Road, a dream for a Beatles fan."
+    },
+    {
+      "id": "c018",
+      "prompt": "The Figure 8 cover was photographed in front of a mural in which city, now a fan memorial?",
+      "answer": "Los Angeles",
+      "accept": ["LA", "L.A."],
+      "details": "The wall on Sunset Boulevard in Silver Lake became a pilgrimage site, covered in messages from fans."
+    },
+    {
+      "id": "c019",
+      "prompt": "In what year did Elliott Smith die, aged 34?",
+      "answer": "2003",
+      "details": "He died in Los Angeles while working on his next album. The exact circumstances remain unresolved."
+    },
+    {
+      "id": "c020",
+      "prompt": "What is the posthumous album, released in 2004, that he had been working on?",
+      "answer": "From a Basement on the Hill",
+      "details": "Completed by family and collaborators from his unfinished recordings."
+    },
+    {
+      "id": "c021",
+      "prompt": "Which 2007 posthumous double album gathered unreleased songs from his Kill Rock Stars years?",
+      "answer": "New Moon",
+      "details": "Full of songs as good as anything he officially released."
+    }
+  ]
+}

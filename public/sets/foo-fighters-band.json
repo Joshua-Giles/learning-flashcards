@@ -1,0 +1,202 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "foo-fighters-band",
+  "title": "Foo Fighters: The Band",
+  "description": "From one man's demo tapes after Nirvana to stadium rock royalty: Dave Grohl's band, its members and its records.",
+  "category": "Music",
+  "group": "Foo Fighters",
+  "emoji": "🛸",
+  "tags": ["music", "rock", "alternative rock", "foo fighters"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "Who founded Foo Fighters and fronts the band?",
+      "answer": "Dave Grohl",
+      "accept": ["Grohl"],
+      "details": "Often called \"the nicest guy in rock\", and one of its hardest-working musicians."
+    },
+    {
+      "id": "c002",
+      "prompt": "Dave Grohl was the drummer in which band before Foo Fighters?",
+      "answer": "Nirvana",
+      "details": "After Kurt Cobain's death in 1994, Grohl stepped out from behind the kit to sing and play guitar."
+    },
+    {
+      "id": "c003",
+      "prompt": "What did \"foo fighters\" mean in WWII pilot slang?",
+      "answer": "UFOs",
+      "accept": ["UFO", "unidentified flying objects", "mysterious lights"],
+      "details": "Allied pilots used it for unexplained glowing objects. Grohl has said he regrets the name a little, but it stuck!"
+    },
+    {
+      "id": "c004",
+      "prompt": "In what year did Foo Fighters release their self-titled debut album?",
+      "answer": "1995",
+      "details": "It started as essentially a one-man project: Grohl played almost every instrument himself."
+    },
+    {
+      "id": "c005",
+      "prompt": "What is the name of Dave Grohl's record label, which releases Foo Fighters albums?",
+      "answer": "Roswell Records",
+      "accept": ["Roswell"],
+      "details": "Named after Roswell, New Mexico, site of the famous 1947 \"UFO crash\". The UFO theme runs deep."
+    },
+    {
+      "id": "c006",
+      "prompt": "What is Foo Fighters' 1997 second album?",
+      "answer": "The Colour and the Shape",
+      "accept": ["The Color and the Shape", "Colour and the Shape"],
+      "details": "The first made as a full band. Many fans still call it their best."
+    },
+    {
+      "id": "c007",
+      "prompt": "Complete the title of the beloved 1997 Foo Fighters love song: \"Ever___\"",
+      "answer": "Everlong",
+      "details": "It became the song the band so often closes shows with, and a staple of acoustic covers."
+    },
+    {
+      "id": "c008",
+      "prompt": "Which Colour and the Shape single is a tribute to ordinary, everyday heroes?",
+      "answer": "My Hero",
+      "details": "Its pounding drums and big chorus made it a rock radio staple."
+    },
+    {
+      "id": "c009",
+      "prompt": "Who was Foo Fighters' first drummer?",
+      "answer": "William Goldsmith",
+      "accept": ["Goldsmith"],
+      "details": "He left during the making of The Colour and the Shape, and Grohl re-recorded many of the drum parts himself."
+    },
+    {
+      "id": "c010",
+      "prompt": "Which drummer joined Foo Fighters in 1997 and became Grohl's closest bandmate?",
+      "answer": "Taylor Hawkins",
+      "accept": ["Hawkins"],
+      "details": "A high-energy, fan-favourite drummer who also sang lead on some songs live."
+    },
+    {
+      "id": "c011",
+      "prompt": "In what year did Taylor Hawkins die?",
+      "answer": "2022",
+      "details": "He died on tour in Bogotá, Colombia. The band later held two huge tribute concerts in his honour."
+    },
+    {
+      "id": "c012",
+      "prompt": "Which Foo Fighters guitarist played in the LA punk band The Germs and toured with Nirvana?",
+      "answer": "Pat Smear",
+      "accept": ["Smear"],
+      "details": "Known for his huge grin on stage. He has been in and out of the band but is a longtime member."
+    },
+    {
+      "id": "c013",
+      "prompt": "Which Foo Fighters bassist came from the Seattle emo band Sunny Day Real Estate?",
+      "answer": "Nate Mendel",
+      "accept": ["Mendel"],
+      "details": "One of the band's longest-serving members, from the first full line-up."
+    },
+    {
+      "id": "c014",
+      "prompt": "Which guitarist joined Foo Fighters in 1999 and has stayed ever since?",
+      "answer": "Chris Shiflett",
+      "accept": ["Shiflett"],
+      "details": "He came from the punk band No Use for a Name."
+    },
+    {
+      "id": "c015",
+      "prompt": "Which 1999 album won Foo Fighters their first Grammy for Best Rock Album?",
+      "answer": "There Is Nothing Left to Lose",
+      "accept": ["Nothing Left to Lose"],
+      "details": "Recorded in Grohl's home studio in Virginia, and more relaxed than its predecessor."
+    },
+    {
+      "id": "c016",
+      "prompt": "Which 2002 album featured the single \"All My Life\"?",
+      "answer": "One by One",
+      "details": "\"All My Life\" goes from a whisper to a scream, a Foo Fighters trademark."
+    },
+    {
+      "id": "c017",
+      "prompt": "Which One by One single urges you to make the most of life, \"It's times like these…\"?",
+      "answer": "Times Like These",
+      "details": "Grohl later re-recorded it acoustic, and it became an anthem of resilience."
+    },
+    {
+      "id": "c018",
+      "prompt": "Which 2005 double album has one rock disc and one acoustic disc?",
+      "answer": "In Your Honor",
+      "details": "A deliberate split showing both sides of the band, loud and quiet."
+    },
+    {
+      "id": "c019",
+      "prompt": "Which In Your Honor single is a defiant anthem: \"Best ___ ___\"?",
+      "answer": "Best of You",
+      "details": "Prince famously covered it in the pouring rain during his 2007 Super Bowl halftime show."
+    },
+    {
+      "id": "c020",
+      "prompt": "Which 2007 single opens Echoes, Silence, Patience & Grace?",
+      "answer": "The Pretender",
+      "accept": ["Pretender"],
+      "details": "A slow-building, furious rocker that became one of their biggest hits."
+    },
+    {
+      "id": "c021",
+      "prompt": "Which 2011 album was recorded on analog tape in Dave Grohl's garage?",
+      "answer": "Wasting Light",
+      "details": "Produced by Butch Vig, who also produced Nirvana's Nevermind. No computers, just tape."
+    },
+    {
+      "id": "c022",
+      "prompt": "Which producer, famous for Nirvana's Nevermind, produced Wasting Light?",
+      "answer": "Butch Vig",
+      "accept": ["Vig"],
+      "details": "A reunion that closed a loop for Grohl, twenty years after Nevermind."
+    },
+    {
+      "id": "c023",
+      "prompt": "Which 2014 album was recorded in eight different US cities alongside an HBO series?",
+      "answer": "Sonic Highways",
+      "details": "Each song was written and recorded in a different music city, with lyrics inspired by local interviews."
+    },
+    {
+      "id": "c024",
+      "prompt": "In which Swedish city did Dave Grohl fall off the stage and break his leg in 2015?",
+      "answer": "Gothenburg",
+      "accept": ["Göteborg", "Goteborg"],
+      "details": "He finished the show with his leg in a cast, then toured seated on a giant guitar-necked throne."
+    },
+    {
+      "id": "c025",
+      "prompt": "What was Foo Fighters' 2017 album, produced by pop producer Greg Kurstin?",
+      "answer": "Concrete and Gold",
+      "details": "Big, layered rock with a pop producer's polish."
+    },
+    {
+      "id": "c026",
+      "prompt": "Which 2021 Foo Fighters album has a dancey, disco-tinged feel?",
+      "answer": "Medicine at Midnight",
+      "details": "Grohl described it as their \"party record\"."
+    },
+    {
+      "id": "c027",
+      "prompt": "What was the band's 2023 album, their first after Taylor Hawkins' death?",
+      "answer": "But Here We Are",
+      "details": "A raw record about grief that many fans see as one of their most emotional."
+    },
+    {
+      "id": "c028",
+      "prompt": "In what year were Foo Fighters inducted into the Rock and Roll Hall of Fame?",
+      "answer": "2021",
+      "details": "Their first year of eligibility. Grohl was already in the Hall with Nirvana."
+    },
+    {
+      "id": "c029",
+      "prompt": "What is the title of Dave Grohl's 2013 documentary about a legendary LA recording studio?",
+      "answer": "Sound City",
+      "details": "It's about the studio where Nevermind was recorded. Grohl bought its famous mixing console."
+    }
+  ]
+}

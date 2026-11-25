@@ -5,9 +5,10 @@
   "title": "Modest Mouse: We Were Dead Before the Ship Even Sank",
   "description": "A companion to the band set: the highlights, key tracks and stories behind the 2007 album that went to No. 1.",
   "category": "Music",
+  "group": "Modest Mouse",
   "emoji": "🚢",
   "tags": ["music", "indie rock", "modest mouse", "album"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

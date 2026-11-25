@@ -7,6 +7,12 @@ export type LoadStatus = 'idle' | 'loading' | 'ready' | 'error';
 
 const SETS_BASE = 'sets/';
 
+const byTitle = (a: SetSummary, b: SetSummary) => a.title.localeCompare(b.title);
+const isAlbum = (s: SetSummary) => s.tags.includes('album');
+/** Within a band/artist group: the main set first, then album companions. */
+const mainSetFirst = (a: SetSummary, b: SetSummary) =>
+  Number(isAlbum(a)) - Number(isAlbum(b)) || byTitle(a, b);
+
 /** Loads the set manifest at startup and individual sets on demand (cached). */
 @Injectable({ providedIn: 'root' })
 export class SetStore {
@@ -16,20 +22,32 @@ export class SetStore {
   readonly sets = signal<SetSummary[]>([]);
   readonly status = signal<LoadStatus>('idle');
 
-  /** Sets grouped by category, both alphabetical. */
+  /**
+   * Sets grouped by category, then by optional `group` (e.g. band). Categories and
+   * groups are alphabetical; within a group the main set comes before album sets.
+   */
   readonly categories = computed<SetCategory[]>(() => {
-    const groups = new Map<string, SetSummary[]>();
+    const byCategory = new Map<string, SetSummary[]>();
     for (const set of this.sets()) {
-      const list = groups.get(set.category) ?? [];
-      list.push(set);
-      groups.set(set.category, list);
+      byCategory.set(set.category, [...(byCategory.get(set.category) ?? []), set]);
     }
-    return [...groups.entries()]
+    return [...byCategory.entries()]
       .sort(([a], [b]) => a.localeCompare(b))
-      .map(([name, sets]) => ({
-        name,
-        sets: [...sets].sort((a, b) => a.title.localeCompare(b.title)),
-      }));
+      .map(([name, sets]) => {
+        const byGroup = new Map<string, SetSummary[]>();
+        const loose: SetSummary[] = [];
+        for (const set of sets) {
+          if (set.group) byGroup.set(set.group, [...(byGroup.get(set.group) ?? []), set]);
+          else loose.push(set);
+        }
+        return {
+          name,
+          groups: [...byGroup.entries()]
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([group, list]) => ({ name: group, sets: list.sort(mainSetFirst) })),
+          sets: loose.sort(byTitle),
+        };
+      });
   });
 
   summary(id: string): SetSummary | undefined {

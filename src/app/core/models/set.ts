@@ -21,6 +21,8 @@ export interface CardSet {
   title: string;
   description: string;
   category: string;
+  /** Optional sub-section within the category (a band/artist or a language). */
+  group?: string;
   emoji: string;
   tags: string[];
   version: number;
@@ -35,6 +37,7 @@ export interface SetSummary {
   title: string;
   description: string;
   category: string;
+  group?: string;
   emoji: string;
   tags: string[];
   version: number;
@@ -47,7 +50,15 @@ export interface SetManifest {
   sets: SetSummary[];
 }
 
+export interface SetGroup {
+  name: string;
+  sets: SetSummary[];
+}
+
 export interface SetCategory {
   name: string;
+  /** Grouped sets (e.g. one group per band), alphabetical. */
+  groups: SetGroup[];
+  /** Sets with no group, shown after the groups. */
   sets: SetSummary[];
 }

@@ -1,0 +1,138 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "sun-kil-moon-band",
+  "title": "Sun Kil Moon: The Band",
+  "description": "Mark Kozelek's long-running project: from Red House Painters' slowcore to the diary-like songs of Benji.",
+  "category": "Music",
+  "group": "Sun Kil Moon",
+  "emoji": "🥊",
+  "tags": ["music", "folk", "slowcore", "indie", "sun kil moon"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "Which singer-songwriter is behind Sun Kil Moon?",
+      "answer": "Mark Kozelek",
+      "accept": ["Kozelek"],
+      "details": "Sun Kil Moon is essentially Kozelek's project, with a changing cast of musicians around him."
+    },
+    {
+      "id": "c002",
+      "prompt": "Which band did Mark Kozelek lead before Sun Kil Moon?",
+      "answer": "Red House Painters",
+      "details": "A pioneering slowcore band: long, slow, melancholy songs that sound like grey weather."
+    },
+    {
+      "id": "c003",
+      "prompt": "Red House Painters were based in which Californian city?",
+      "answer": "San Francisco",
+      "accept": ["SF", "San Fran"],
+      "details": "They came up in the late-'80s and early-'90s San Francisco scene."
+    },
+    {
+      "id": "c004",
+      "prompt": "Which British label, famous for its atmospheric sound, signed Red House Painters?",
+      "answer": "4AD",
+      "accept": ["four ad"],
+      "details": "The home of Cocteau Twins and Pixies. Red House Painters fitted its moody aesthetic perfectly."
+    },
+    {
+      "id": "c005",
+      "prompt": "The name Sun Kil Moon comes from a professional in which sport?",
+      "answer": "Boxing",
+      "accept": ["boxer", "a boxer"],
+      "details": "It's a nod to the Korean boxer Sung-Kil Moon. Kozelek is a big boxing fan and often writes about fighters."
+    },
+    {
+      "id": "c006",
+      "prompt": "What is Sun Kil Moon's 2003 debut album?",
+      "answer": "Ghosts of the Great Highway",
+      "details": "A fan favourite, mixing gentle folk with long, crunchy electric guitar workouts."
+    },
+    {
+      "id": "c007",
+      "prompt": "Which much-loved Ghosts of the Great Highway song asks to be carried back to Kozelek's home state?",
+      "answer": "Carry Me Ohio",
+      "details": "A wistful song of home and regret, often named among his very best."
+    },
+    {
+      "id": "c008",
+      "prompt": "In which Ohio town did Mark Kozelek grow up?",
+      "answer": "Massillon",
+      "details": "Ohio and its small towns come up again and again in his lyrics."
+    },
+    {
+      "id": "c009",
+      "prompt": "Sun Kil Moon's 2005 album Tiny Cities is made up entirely of covers of which band?",
+      "answer": "Modest Mouse",
+      "details": "A link to the Modest Mouse sets! Kozelek turns Isaac Brock's twitchy songs into slow, hushed acoustic ballads."
+    },
+    {
+      "id": "c010",
+      "prompt": "What is the name of Mark Kozelek's own record label?",
+      "answer": "Caldo Verde Records",
+      "accept": ["Caldo Verde"],
+      "details": "Named after a Portuguese soup. Sun Kil Moon releases have mostly come out on it."
+    },
+    {
+      "id": "c011",
+      "prompt": "Which 2008 Sun Kil Moon album shares its name with a spring month?",
+      "answer": "April",
+      "details": "A long, sorrowful, mostly acoustic record, and one of his most loved."
+    },
+    {
+      "id": "c012",
+      "prompt": "Admiral Fell Promises (2010) is built almost entirely around which instrument?",
+      "answer": "Classical guitar",
+      "accept": ["nylon-string guitar", "nylon guitar", "acoustic guitar", "guitar"],
+      "details": "Kozelek plays intricate fingerpicked nylon-string guitar throughout, with almost nothing else."
+    },
+    {
+      "id": "c013",
+      "prompt": "What is Sun Kil Moon's acclaimed 2014 album?",
+      "answer": "Benji",
+      "details": "Often called his masterpiece: plain-spoken, diary-like songs that hit very hard."
+    },
+    {
+      "id": "c014",
+      "prompt": "Benji is famous for frank, diary-like songs about family and what heavy subject?",
+      "answer": "Death",
+      "accept": ["mortality", "loss", "grief"],
+      "details": "Relatives, strangers and news stories: a whole album confronting how suddenly people can be gone."
+    },
+    {
+      "id": "c015",
+      "prompt": "The Benji song \"Ben's My Friend\" is about which Death Cab for Cutie singer?",
+      "answer": "Ben Gibbard",
+      "accept": ["Gibbard"],
+      "details": "A rambling, funny, self-deprecating song about middle age, friendship and envy."
+    },
+    {
+      "id": "c016",
+      "prompt": "Later Sun Kil Moon records moved towards long, rambling songs in which vocal style?",
+      "answer": "Spoken word",
+      "accept": ["talking", "spoken", "talk-singing"],
+      "details": "Songs began to read like stream-of-consciousness journals, sometimes more than ten minutes long."
+    },
+    {
+      "id": "c017",
+      "prompt": "What is Sun Kil Moon's 2015 album, released the year after Benji?",
+      "answer": "Universal Themes",
+      "details": "Even longer, looser songs, which divided fans who'd loved Benji."
+    },
+    {
+      "id": "c018",
+      "prompt": "Which project led by Justin Broadrick made a joint album with Sun Kil Moon in 2016?",
+      "answer": "Jesu",
+      "details": "An unlikely pairing: Broadrick's heavy, droning electronics under Kozelek's spoken-word storytelling."
+    },
+    {
+      "id": "c019",
+      "prompt": "Mark Kozelek played the bassist of the fictional band Stillwater in which 2000 film?",
+      "answer": "Almost Famous",
+      "details": "Cameron Crowe, the film's director, was a longtime fan of his music."
+    }
+  ]
+}

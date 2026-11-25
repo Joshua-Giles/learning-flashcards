@@ -52,6 +52,8 @@ This is the house style for every set in `public/sets/`. It's written for Claude
 - Card `id`s: `c001`, `c002`, … in order. **Never rename, renumber or reuse a card ID.** Progress is stored as `setId/cardId`. When you delete a card, its ID retires with it. New cards take the next unused number.
 - Bump the set's `version` and `updated` (YYYY-MM-DD) whenever you change the set's cards.
 - Start each file with `"$schema": "../../schema/set.schema.json"` for editor autocomplete.
+- **`group`** puts sets into a collapsible section of the sidebar. Every set about a band or artist gets `"group": "<Artist name>"` (exactly the same string for the main set and its album sets, e.g. `"Nick Drake"`), and every language set gets the language (`"Italian"`). Leave it out for one-off topics.
+- **Album sets** add the tag `"album"` so they sort after the artist's main set. Title them `"<Artist>: <Album>"`. The sidebar drops the `"<Artist>: "` prefix inside the group.
 
 ## 5. Workflow: a new set
 

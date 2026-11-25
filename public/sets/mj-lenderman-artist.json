@@ -1,0 +1,73 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "mj-lenderman-artist",
+  "title": "MJ Lenderman: The Artist",
+  "description": "North Carolina's wry, wobbly-guitar songwriter: where he's from, the band he played in and the records. A small starter set, so add your questions and it will grow.",
+  "category": "Music",
+  "group": "MJ Lenderman",
+  "emoji": "🤠",
+  "tags": ["music", "alt-country", "indie rock", "mj lenderman"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "Which North Carolina mountain city is MJ Lenderman from?",
+      "answer": "Asheville",
+      "details": "Asheville's small, close-knit music scene shaped both his solo work and his band."
+    },
+    {
+      "id": "c002",
+      "prompt": "MJ Lenderman played lead guitar in which Asheville band?",
+      "answer": "Wednesday",
+      "details": "A noisy, country-tinged indie rock band. His lead guitar is a big part of their sound."
+    },
+    {
+      "id": "c003",
+      "prompt": "Who is the singer and songwriter who leads the band Wednesday?",
+      "answer": "Karly Hartzman",
+      "accept": ["Hartzman"],
+      "details": "She and Lenderman were long-time collaborators. Their songs share a love of small-town Southern detail."
+    },
+    {
+      "id": "c004",
+      "prompt": "MJ Lenderman's music is often described as a mix of indie rock and which other genre?",
+      "answer": "Alt-country",
+      "accept": ["country", "alternative country", "americana"],
+      "details": "Think slacker guitar plus pedal steel, and dryly funny lyrics."
+    },
+    {
+      "id": "c005",
+      "prompt": "What is MJ Lenderman's 2022 album?",
+      "answer": "Boat Songs",
+      "details": "The record that started getting him noticed well beyond North Carolina."
+    },
+    {
+      "id": "c006",
+      "prompt": "The Boat Songs track \"Hangover Game\" references which basketball legend?",
+      "answer": "Michael Jordan",
+      "accept": ["Jordan", "MJ"],
+      "details": "A nod to the famous story of Jordan playing through illness (or, the joke goes, a hangover). Lenderman loves sports references."
+    },
+    {
+      "id": "c007",
+      "prompt": "What is MJ Lenderman's 2024 breakthrough album?",
+      "answer": "Manning Fireworks",
+      "details": "Widely praised as one of the year's best albums, full of funny, sad portraits of hapless men."
+    },
+    {
+      "id": "c008",
+      "prompt": "Which label released Manning Fireworks?",
+      "answer": "Anti-",
+      "accept": ["Anti", "Anti Records", "ANTI-"],
+      "details": "A label known for idiosyncratic songwriters."
+    },
+    {
+      "id": "c009",
+      "prompt": "\"She's Leaving You\" is a single from which MJ Lenderman album?",
+      "answer": "Manning Fireworks",
+      "details": "A wry break-up song with a big, ragged guitar sound."
+    }
+  ]
+}

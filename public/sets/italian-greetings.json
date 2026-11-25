@@ -5,9 +5,10 @@
   "title": "Italian: Greetings & Basics",
   "description": "Ciao! The phrases you'll use in your first hour in Italy: hellos, goodbyes, thanks and polite survival lines.",
   "category": "Languages",
+  "group": "Italian",
   "emoji": "👋",
   "tags": ["italian", "beginner", "greetings", "phrases"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

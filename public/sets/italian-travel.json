@@ -5,9 +5,10 @@
   "title": "Italian: Getting Around",
   "description": "Trains, tickets, directions, hotels and signs: the words that get you from the airport to your dinner table.",
   "category": "Languages",
+  "group": "Italian",
   "emoji": "🚆",
   "tags": ["italian", "beginner", "travel", "directions"],
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-25",
   "cards": [
     {

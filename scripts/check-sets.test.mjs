@@ -139,6 +139,21 @@ test('near-duplicate prompts are warnings, not errors', () => {
   );
 });
 
+test('manifest carries the optional group', () => {
+  withSets(
+    {
+      'a.json': makeSet('a', [card('c1', 'A?')], { group: 'Modest Mouse' }),
+      'b.json': makeSet('b', [card('c1', 'B?')]),
+    },
+    (dir) => {
+      const { errors, manifest } = checkSets(dir);
+      assert.deepEqual(errors, []);
+      assert.equal(manifest.sets.find((s) => s.id === 'a').group, 'Modest Mouse');
+      assert.equal('group' in manifest.sets.find((s) => s.id === 'b'), false);
+    },
+  );
+});
+
 test('manifest is sorted by category then title', () => {
   withSets(
     {

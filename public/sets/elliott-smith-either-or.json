@@ -1,0 +1,88 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "elliott-smith-either-or",
+  "title": "Elliott Smith: Either/Or",
+  "description": "His 1997 masterpiece: the title, the songs and the film that carried them to the world.",
+  "category": "Music",
+  "group": "Elliott Smith",
+  "emoji": "🌹",
+  "tags": ["music", "singer-songwriter", "elliott smith", "album"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "In what year was Either/Or released?",
+      "answer": "1997",
+      "details": "The same year Good Will Hunting came out, which was perfect timing."
+    },
+    {
+      "id": "c002",
+      "prompt": "Which label released Either/Or?",
+      "answer": "Kill Rock Stars",
+      "details": "It was his last album for the label before moving to DreamWorks for XO."
+    },
+    {
+      "id": "c003",
+      "prompt": "Either/Or is named after a book by which Danish philosopher?",
+      "answer": "Søren Kierkegaard",
+      "accept": ["Kierkegaard", "Soren Kierkegaard"],
+      "details": "Kierkegaard's Either/Or (1843) weighs a life of pleasure against a life of duty. Smith studied philosophy in college."
+    },
+    {
+      "id": "c004",
+      "prompt": "Which song opens Either/Or?",
+      "answer": "Speed Trials",
+      "details": "A hushed, ominous opener that sets the mood straight away."
+    },
+    {
+      "id": "c005",
+      "prompt": "Which Either/Or song about drinking, a quiet late-night ballad, appears in Good Will Hunting?",
+      "answer": "Between the Bars",
+      "details": "Perhaps his most famous song: tender and devastating at the same time."
+    },
+    {
+      "id": "c006",
+      "prompt": "Which Either/Or song is named after the Spanish word in a Californian city's name?",
+      "answer": "Angeles",
+      "details": "A fingerpicked song about Los Angeles and the music industry, and another one used in Good Will Hunting."
+    },
+    {
+      "id": "c007",
+      "prompt": "Which hopeful, short song closes Either/Or?",
+      "answer": "Say Yes",
+      "details": "A rare upbeat ending about new love. It's also in Good Will Hunting."
+    },
+    {
+      "id": "c008",
+      "prompt": "Which Either/Or song is named after Portland's big annual flower festival parade?",
+      "answer": "Rose Parade",
+      "details": "Portland is the \"City of Roses\". He sings about watching the parade go by."
+    },
+    {
+      "id": "c009",
+      "prompt": "Which Either/Or song shares its name with a California city and a Portland street?",
+      "answer": "Alameda",
+      "details": "One of the album's most loved songs, built on a gently rolling guitar part."
+    },
+    {
+      "id": "c010",
+      "prompt": "Complete the Either/Or song title: \"Ballad of Big ___\"",
+      "answer": "Nothing",
+      "details": "\"Ballad of Big Nothing\" is a brisk, bitter song about doing what you want with nothing to show for it."
+    },
+    {
+      "id": "c011",
+      "prompt": "Which Either/Or song title is about self-image: \"___ of Me\"?",
+      "answer": "Pictures",
+      "details": "\"Pictures of Me\" is one of the album's more full-band, rocking moments."
+    },
+    {
+      "id": "c012",
+      "prompt": "In which anniversary year did Either/Or get an expanded reissue with live and unreleased tracks?",
+      "answer": "2017",
+      "details": "Its 20th anniversary, with remastered audio and extra songs."
+    }
+  ]
+}

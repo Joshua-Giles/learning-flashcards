@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "nick-drake-pink-moon",
+  "title": "Nick Drake: Pink Moon",
+  "description": "His last album: under half an hour of voice and guitar, and one of the most haunting records ever made.",
+  "category": "Music",
+  "group": "Nick Drake",
+  "emoji": "🌸",
+  "tags": ["music", "folk", "nick drake", "album"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "In what year was Pink Moon released?",
+      "answer": "1972",
+      "details": "It came out not long after Bryter Layter, and was the last album released in his lifetime."
+    },
+    {
+      "id": "c002",
+      "prompt": "Roughly how many minutes long is Pink Moon?",
+      "answer": "28",
+      "accept": ["about 28", "28 minutes", "under 30", "30"],
+      "details": "Eleven songs in under half an hour. Not a second is wasted."
+    },
+    {
+      "id": "c003",
+      "prompt": "Apart from a single overdub, Pink Moon is just Drake's voice and which instrument?",
+      "answer": "Guitar",
+      "accept": ["acoustic guitar"],
+      "details": "After the lush arrangements of his first two albums, he chose to strip everything away."
+    },
+    {
+      "id": "c004",
+      "prompt": "Which instrument is overdubbed on the title track, the only addition on the album?",
+      "answer": "Piano",
+      "details": "A few simple piano notes, the album's one bit of decoration."
+    },
+    {
+      "id": "c005",
+      "prompt": "Which engineer recorded Pink Moon with Drake in just two late-night sessions?",
+      "answer": "John Wood",
+      "accept": ["Wood"],
+      "details": "Wood had engineered Drake's earlier albums. This time it was just the two of them in the studio."
+    },
+    {
+      "id": "c006",
+      "prompt": "According to a famous story, where did Drake leave the Pink Moon master tapes?",
+      "answer": "Island's reception desk",
+      "accept": ["reception", "at reception", "record label reception", "island records reception"],
+      "details": "The legend is that he dropped them off without a word. The details vary in the telling, but the image stuck."
+    },
+    {
+      "id": "c007",
+      "prompt": "Which song opens Pink Moon?",
+      "answer": "Pink Moon",
+      "details": "The same song used in that famous 2000 Volkswagen advert. See the artist set."
+    },
+    {
+      "id": "c008",
+      "prompt": "Which Pink Moon song title is a phrase for a place where you belong?",
+      "answer": "Place to Be",
+      "details": "A short, aching song about feeling older and more worn than your years."
+    },
+    {
+      "id": "c009",
+      "prompt": "Which Pink Moon song title refers to everything hidden from the light, \"___ Behind the Sun\"?",
+      "answer": "Things",
+      "details": "\"Things Behind the Sun\" is one of the album's longest and most intricate guitar pieces."
+    },
+    {
+      "id": "c010",
+      "prompt": "Which Pink Moon song title names an organism that lives off another?",
+      "answer": "Parasite",
+      "details": "One of the album's darkest, most self-critical songs."
+    },
+    {
+      "id": "c011",
+      "prompt": "What is the closing track of Pink Moon?",
+      "answer": "From the Morning",
+      "details": "A rare hopeful ending. A line from it, \"now we rise and we are everywhere\", is inscribed on his gravestone."
+    }
+  ]
+}
