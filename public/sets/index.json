@@ -1,0 +1,19 @@
+{
+  "sets": [
+    {
+      "id": "sample-solar-system",
+      "title": "Sample: Our Solar System",
+      "description": "A tiny warm-up set for testing the app — eight planets' worth of space facts.",
+      "category": "Science",
+      "emoji": "🪐",
+      "tags": [
+        "sample",
+        "space"
+      ],
+      "version": 1,
+      "updated": "2026-11-24",
+      "cardCount": 8,
+      "quizzableCount": 8
+    }
+  ]
+}

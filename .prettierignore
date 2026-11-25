@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+.angular
+test-results
+playwright-report
+package-lock.json
+skills-lock.json
+.claude
+.agents
+public/sets/index.json
