@@ -53,9 +53,9 @@ The detailed tasks, with acceptance criteria, verification and files, are in [to
 
 ### Phase 2: Core learning loop
 
-- [ ] T5: Flip card component and study mode
-- [ ] T6: Answer matcher (pure, test-first)
-- [ ] T7: Quiz mode
+- [x] T5: Flip card component and study mode
+- [x] T6: Answer matcher (pure, test-first)
+- [x] T7: Quiz mode
 
 **Checkpoint B:** I can study and then quiz the sample set end to end (nothing persists yet). _Review the feel of the animations and the matcher's forgiveness with you._
 

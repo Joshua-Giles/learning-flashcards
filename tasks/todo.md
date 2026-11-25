@@ -90,14 +90,14 @@ Add one small sample set (about 8 cards) for development.
 **Description:**
 
 - `lf-flip-card`: a 3D flip of about 450ms, with a crossfade under reduced motion.
-- Study page: progress bar, prev/next, "Still learning" / "Knew it" once flipped, hint, shuffle, and a "still learning only" filter.
+- Study page: progress bar, prev/next, "Still learning" / "Knew it" once flipped, hint and shuffle. (The "still learning only" filter moved to T9, since it needs saved progress. For now, "Restart with missed" covers it within a session.)
 - Keyboard shortcuts (Space, 1, 2, ←, →, H, S).
 - End-of-session summary with "Quiz me now" and "Restart with missed".
 - `details` goes through a whitelist Markdown-lite renderer (bold, italics, links only).
   **Acceptance criteria:**
-- [ ] Every control works by mouse and by keyboard, and grading only works after flipping
-- [ ] The summary shows the counts and the missed cards, and its actions work
-- [ ] The Markdown-lite renderer escapes HTML (tested with `<script>`)
+- [x] Every control works by mouse and by keyboard, and grading only works after flipping
+- [x] The summary shows the counts and the missed cards, and its actions work
+- [x] The Markdown-lite renderer escapes HTML (tested with `<script>`)
       **Verification:** component tests for flip-card and markdown-lite; a manual feel check of the animation
       **Dependencies:** T3
       **Files:** `features/study/flip-card.*`, `features/study/study-page.*`, `features/study/session-summary.*`, `shared/markdown-lite.*`, `core/shortcuts.service.ts`
@@ -108,9 +108,9 @@ Add one small sample set (about 8 cards) for development.
 **Description:** Write `matchAnswer(input, card) → { result: 'correct'|'close'|'wrong', accentOnly: boolean, matched?: string }`. It handles normalisation (case, whitespace, punctuation, accent folding, English and Italian leading articles), the `accept` list, and Damerau-Levenshtein thresholds from SPEC F4.
 **Acceptance criteria:**
 
-- [ ] `perche`→correct with accentOnly, `Buongorno`→close, `il gatto` vs `gatto`→correct, `l'acqua` vs `acqua`→correct, empty input→wrong
-- [ ] Short answers (≤ 3 characters) never return close
-- [ ] Coverage of the matcher is ≥ 95%
+- [x] `perche`→correct with accentOnly, `Buongorno`→close, `il gatto` vs `gatto`→correct, `l'acqua` vs `acqua`→correct, empty input→wrong
+- [x] Short answers (≤ 3 characters) never return close
+- [ ] Coverage of the matcher is ≥ 95% (not measured yet: needs `@vitest/coverage-v8`, a new dev dependency)
       **Verification:** `npm test -- answer-matcher`
       **Dependencies:** T1
       **Files:** `core/logic/answer-matcher.ts`, `core/logic/answer-matcher.spec.ts`, `core/logic/text-normalize.ts`
@@ -127,9 +127,9 @@ Add one small sample set (about 8 cards) for development.
 - Weakest-first ordering, with a stub until T9 adds mastery.
 - Results screen with accuracy, best combo and missed cards.
   **Acceptance criteria:**
-- [ ] The whole quiz can be done with the keyboard only (type, Enter, Enter)
-- [ ] Close and override outcomes are recorded separately in the session result
-- [ ] Non-quizzable cards are skipped
+- [x] The whole quiz can be done with the keyboard only (type, Enter, Enter)
+- [x] Close and override outcomes are recorded separately in the session result
+- [x] Non-quizzable cards are skipped
       **Verification:** component test for the quiz flow; Playwright: a typo is offered as close and accepted
       **Dependencies:** T5 (shared shortcuts and markdown), T6
       **Files:** `features/quiz/quiz-page.*`, `features/quiz/quiz-feedback.*`, `features/quiz/quiz-results.*`, `e2e/quiz.spec.ts`
@@ -137,7 +137,7 @@ Add one small sample set (about 8 cards) for development.
 
 ### ✅ Checkpoint B: Core loop
 
-- [ ] Study → summary → "Quiz me now" → results works end to end on the sample set
+- [x] Study → summary → "Quiz me now" → results works end to end on the sample set
 - [ ] **Review with you: animation feel, how forgiving the matcher is, keyboard flow**
 
 ---
@@ -173,7 +173,7 @@ Add one small sample set (about 8 cards) for development.
 - [ ] A set shows as mastered at ≥ 90% of its quizzable cards at box ≥ 4, and the bonus is awarded only once
       **Verification:** `npm test -- scoring mastery`; a manual run of a quiz
       **Dependencies:** T7, T8
-      **Files:** `core/logic/scoring.ts`, `core/logic/mastery.ts`, `core/progress-store.ts`, plus small hooks in the study and quiz pages
+      **Files:** `core/logic/scoring.ts`, `core/logic/mastery.ts`, `core/progress-store.ts`, plus small hooks in the study and quiz pages (including the "still learning only" study filter moved from T5)
       **Scope:** M
 
 ### T10: Daily goal, streak, and top-bar indicators

@@ -15,14 +15,12 @@ export const routes: Routes = [
   {
     path: 'sets/:setId/study',
     title: 'Study · Flashcards',
-    loadComponent: comingSoon,
-    data: { heading: 'Study mode' },
+    loadComponent: () => import('./features/study/study-page').then((m) => m.StudyPage),
   },
   {
     path: 'sets/:setId/quiz',
     title: 'Quiz · Flashcards',
-    loadComponent: comingSoon,
-    data: { heading: 'Quiz mode' },
+    loadComponent: () => import('./features/quiz/quiz-page').then((m) => m.QuizPage),
   },
   {
     path: 'questions',
