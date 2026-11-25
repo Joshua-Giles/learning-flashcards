@@ -95,7 +95,7 @@ test.describe('Dashboard', () => {
     await expect(page.getByTestId('dusty-sets')).toContainText('Our Solar System');
     await expect(page.getByTestId('dusty-sets')).toContainText('14 days ago');
     await expect(page.getByTestId('continue')).toContainText('Our Solar System');
-    await expect(page.getByTestId('fresh-sets')).toHaveCount(0);
+    await expect(page.getByTestId('fresh-sets')).not.toContainText('Our Solar System');
   });
 
   test('a never-opened set is a fresh pick', async ({ page }) => {

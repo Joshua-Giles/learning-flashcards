@@ -5,7 +5,7 @@
  * Changing this shape requires a STATE_VERSION bump and a migration
  * (core/logic/state-schema.ts). That is an "Ask first" change per SPEC.md.
  */
-export const STATE_VERSION = 1;
+export const STATE_VERSION = 2;
 
 /** A calendar day in the user's local time zone: `YYYY-MM-DD`. Never UTC. */
 export type LocalDay = string;
@@ -49,6 +49,19 @@ export interface DayStats {
   goalMet: boolean;
 }
 
+export type QuestionStatus = 'open' | 'sent' | 'resolved';
+
+/** A question noted while studying, to bring back to Claude for new cards (v2+). */
+export interface Question {
+  id: string;
+  text: string;
+  setId?: string;
+  cardId?: string;
+  /** ISO timestamp. */
+  createdAt: string;
+  status: QuestionStatus;
+}
+
 export interface Settings {
   dailyGoal: number;
 }
@@ -60,6 +73,7 @@ export interface AppState {
   cards: Record<string, CardProgress>;
   sets: Record<string, SetProgress>;
   days: Record<LocalDay, DayStats>;
+  questions: Question[];
 }
 
 export const DEFAULT_DAILY_GOAL = 50;
@@ -71,6 +85,7 @@ export function createInitialState(): AppState {
     cards: {},
     sets: {},
     days: {},
+    questions: [],
   };
 }
 

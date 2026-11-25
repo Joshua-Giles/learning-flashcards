@@ -1,0 +1,212 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "italian-greetings",
+  "title": "Italian: Greetings & Basics",
+  "description": "Ciao! The phrases you'll use in your first hour in Italy: hellos, goodbyes, thanks and polite survival lines.",
+  "category": "Languages",
+  "emoji": "👋",
+  "tags": ["italian", "beginner", "greetings", "phrases"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "How do you say \"good morning\" in Italian?",
+      "answer": "Buongiorno",
+      "accept": ["buon giorno"],
+      "details": "Literally \"good day\". It works from morning until early afternoon, as both hello and goodbye.",
+      "hint": "buon + giorno (day)"
+    },
+    {
+      "id": "c002",
+      "prompt": "What do Italians say for \"good evening\"?",
+      "answer": "Buonasera",
+      "accept": ["buona sera"],
+      "details": "It switches in surprisingly early, from mid-afternoon on in many places. When in doubt after lunch, go with *buonasera*."
+    },
+    {
+      "id": "c003",
+      "prompt": "Italian for \"goodnight\" (when going to bed)?",
+      "answer": "Buonanotte",
+      "accept": ["buona notte"],
+      "details": "Only for bedtime or the very end of a night out. As a hello, use *buonasera*."
+    },
+    {
+      "id": "c004",
+      "prompt": "Which casual word means both \"hi\" and \"bye\" in Italian?",
+      "answer": "Ciao",
+      "details": "It comes from Venetian *s-ciào vostro*, \"I am your slave\", a hugely over-the-top \"at your service\". Use it with friends, not strangers."
+    },
+    {
+      "id": "c005",
+      "prompt": "Which polite, all-purpose \"hello\" is safer than *ciao* with strangers?",
+      "answer": "Salve",
+      "details": "From Latin, the way Romans greeted each other. Friendly but not too familiar: perfect for shops."
+    },
+    {
+      "id": "c006",
+      "prompt": "What's the standard polite \"goodbye\" in Italian?",
+      "answer": "Arrivederci",
+      "details": "Literally \"until we see each other again\". Extra formal: *ArrivederLa*.",
+      "hint": "Starts with \"arrive…\""
+    },
+    {
+      "id": "c007",
+      "prompt": "How do you say \"see you later\" in Italian?",
+      "answer": "A dopo",
+      "accept": ["ci vediamo dopo", "a più tardi"],
+      "details": "*Dopo* = after. Short, sweet and very common."
+    },
+    {
+      "id": "c008",
+      "prompt": "Italian for \"see you soon\"?",
+      "answer": "A presto",
+      "details": "*Presto* means \"soon\" (and \"early\"). You'll also see it signing off emails."
+    },
+    {
+      "id": "c009",
+      "prompt": "How do you say \"please\" in Italian?",
+      "answer": "Per favore",
+      "accept": ["per piacere", "per cortesia"],
+      "details": "Literally \"as a favour\". Tack it onto any request and you'll get a warmer response."
+    },
+    {
+      "id": "c010",
+      "prompt": "What's Italian for \"thank you\"?",
+      "answer": "Grazie",
+      "details": "Say it GRAHT-see-eh, with three syllables. \"Gra-zee\" is a classic tourist giveaway."
+    },
+    {
+      "id": "c011",
+      "prompt": "How do you say \"thank you very much\" in Italian?",
+      "answer": "Grazie mille",
+      "accept": ["grazie tante"],
+      "details": "Literally \"a thousand thanks\". Italians don't do gratitude by halves."
+    },
+    {
+      "id": "c012",
+      "prompt": "What's the standard reply to *grazie* (\"you're welcome\")?",
+      "answer": "Prego",
+      "details": "A true Swiss Army word: it also means \"please, go ahead\", \"come in\" and \"how can I help?\" (you'll hear it in every shop)."
+    },
+    {
+      "id": "c013",
+      "prompt": "How do you say \"yes\" in Italian?",
+      "answer": "Sì",
+      "details": "Mind the accent: *sì* = yes, *si* (no accent) = \"oneself\", as in *si mangia bene qui* (\"one eats well here\")."
+    },
+    {
+      "id": "c014",
+      "prompt": "What polite word do you say to get a stranger's attention (\"excuse me\")?",
+      "answer": "Scusi",
+      "accept": ["mi scusi", "scusa"],
+      "details": "*Scusi* is formal, *scusa* is for friends. Also used to squeeze past people on a crowded bus."
+    },
+    {
+      "id": "c015",
+      "prompt": "How do you say \"I'm sorry\" (sympathy or regret) in Italian?",
+      "answer": "Mi dispiace",
+      "details": "Literally \"it displeases me\". For bumping into someone, a quick *scusi* is enough."
+    },
+    {
+      "id": "c016",
+      "prompt": "How do you ask a friend \"How are you?\" in Italian?",
+      "answer": "Come stai?",
+      "accept": ["come va"],
+      "details": "*Stai* is the informal \"you\" form of *stare* (to be / to stay). *Come va?* (\"how's it going?\") works too."
+    },
+    {
+      "id": "c017",
+      "prompt": "How do you politely ask a stranger or an older person \"How are you?\"",
+      "answer": "Come sta?",
+      "details": "The formal *Lei* form. Italian uses \"she\" (*Lei*) as the polite \"you\", which sounds odd but you get used to it fast."
+    },
+    {
+      "id": "c018",
+      "prompt": "How do you reply \"Fine, thanks\" in Italian?",
+      "answer": "Bene, grazie",
+      "accept": ["sto bene grazie", "bene"],
+      "details": "Add *e tu?* (\"and you?\") with friends, or *e Lei?* in formal situations."
+    },
+    {
+      "id": "c019",
+      "prompt": "How do you ask someone their name, informally?",
+      "answer": "Come ti chiami?",
+      "details": "Literally \"how do you call yourself?\". Formal version: *Come si chiama?*"
+    },
+    {
+      "id": "c020",
+      "prompt": "How do you start \"My name is…\" in Italian?",
+      "answer": "Mi chiamo",
+      "details": "\"I call myself…\", the mirror of *come ti chiami?* So: *Mi chiamo Marco.*"
+    },
+    {
+      "id": "c021",
+      "prompt": "What one word means \"Nice to meet you\" in Italian?",
+      "answer": "Piacere",
+      "accept": ["piacere di conoscerti", "piacere mio"],
+      "details": "Literally \"pleasure\". Say it with a handshake. The reply is often *piacere mio* (\"my pleasure\")."
+    },
+    {
+      "id": "c022",
+      "prompt": "How do you ask \"Where are you from?\" informally?",
+      "answer": "Di dove sei?",
+      "details": "Expect the follow-up question about which *city* you're from. Italians are very regional!"
+    },
+    {
+      "id": "c023",
+      "prompt": "How does a man say \"I'm American\" in Italian?",
+      "answer": "Sono americano",
+      "accept": ["sono americana"],
+      "details": "A woman says *americana*. Nationalities aren't capitalised in Italian."
+    },
+    {
+      "id": "c024",
+      "prompt": "How do you politely ask \"Do you speak English?\"",
+      "answer": "Parla inglese?",
+      "accept": ["parli inglese"],
+      "details": "Trying a little Italian first, and then asking, usually earns a smile, plus some English in return."
+    },
+    {
+      "id": "c025",
+      "prompt": "How do you say \"I don't understand\" in Italian?",
+      "answer": "Non capisco",
+      "details": "*Capire* = to understand. You'll recognise it in *capisci?*, the famous movie-mobster \"capisce?\"."
+    },
+    {
+      "id": "c026",
+      "prompt": "How do you politely ask someone to repeat themselves?",
+      "answer": "Può ripetere?",
+      "accept": ["può ripetere per favore", "puoi ripetere"],
+      "details": "Formal *può*, informal *puoi*. Pair it with *più lentamente* (next card) for best results."
+    },
+    {
+      "id": "c027",
+      "prompt": "How do you ask someone to speak \"more slowly\"?",
+      "answer": "Più lentamente",
+      "accept": ["più piano", "piu lentamente per favore"],
+      "details": "*Più* = more. Italians speak fast and with their hands, so this phrase is gold."
+    },
+    {
+      "id": "c028",
+      "prompt": "What's the polite way to address a woman (\"Madam\" / \"Mrs.\")?",
+      "answer": "Signora",
+      "details": "For a man: *Signore* (shortened to *Signor* before a name, as in *Signor Rossi*)."
+    },
+    {
+      "id": "c029",
+      "prompt": "What do you say to welcome a man (\"Welcome!\")?",
+      "answer": "Benvenuto",
+      "accept": ["benvenuta", "benvenuti"],
+      "details": "It changes ending like an adjective: *benvenuta* (woman), *benvenuti* (a group)."
+    },
+    {
+      "id": "c030",
+      "prompt": "What do Italians say when clinking glasses?",
+      "answer": "Salute",
+      "accept": ["cin cin"],
+      "details": "*Salute* = health. *Cin cin* (chin-chin) imitates the clink. Make eye contact, it's good manners!"
+    }
+  ]
+}

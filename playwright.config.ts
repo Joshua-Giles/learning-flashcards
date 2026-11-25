@@ -14,7 +14,9 @@ export default defineConfig({
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   webServer: {
-    command: `npx ng serve --port ${PORT}`,
+    // --prebundle=false: Vite's dependency discovery otherwise reloads the page the
+    // first time a new package is imported, which made cold-start runs flaky.
+    command: `npx ng serve --port ${PORT} --prebundle=false`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env['CI'],
     timeout: 120_000,

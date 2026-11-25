@@ -23,6 +23,7 @@ import { Award, ProgressStore } from '../../core/progress-store';
 import { Card } from '../../core/models/set';
 import { SetStore } from '../../core/set-store';
 import { MarkdownLite } from '../../shared/markdown-lite';
+import { CaptureService } from '../notebook/capture.service';
 import { QUICK_QUIZ_SIZE, QuizSession } from './quiz-session';
 import { QuizResultsPanel } from './quiz-results';
 
@@ -244,6 +245,14 @@ import { QuizResultsPanel } from './quiz-results';
                   I was right <kbd>R</kbd>
                 </button>
               }
+              <button
+                type="button"
+                class="btn ml-auto px-3 text-muted hover:bg-surface-2 hover:text-fg"
+                (click)="askQuestion()"
+                data-testid="ask-question"
+              >
+                Ask about this <kbd>?</kbd>
+              </button>
             </div>
           </section>
         }
@@ -268,6 +277,7 @@ export class QuizPage {
   private fullQuiz = false;
   private readonly progress = inject(ProgressStore);
   private readonly feedback = inject(AwardFeedback);
+  private readonly capture = inject(CaptureService);
   protected readonly quizPoints = signal(0);
   protected readonly personalBest = signal(false);
   protected readonly hintPenalty = POINTS.hintPenalty;
@@ -374,6 +384,18 @@ export class QuizPage {
     }
   }
 
+  /** Note a question about the current card in the notebook. */
+  protected askQuestion(): void {
+    const card = this.session.current();
+    if (!card || !this.set.hasValue()) return;
+    void this.capture.open({
+      setId: this.setId(),
+      cardId: card.id,
+      setTitle: this.set.value().title,
+      cardPrompt: card.prompt,
+    });
+  }
+
   private applyAward(award: Award): void {
     this.quizPoints.update((p) => p + award.points);
     this.feedback.announce(award);
@@ -386,7 +408,8 @@ export class QuizPage {
   protected onKeydown(event: KeyboardEvent): void {
     if (shouldIgnoreShortcut(event) || !this.started() || !this.session.answered()) return;
     const key = event.key.toLowerCase();
-    if (key === 'a') this.session.acceptClose();
+    if (key === '?') this.askQuestion();
+    else if (key === 'a') this.session.acceptClose();
     else if (key === 'r') this.session.override();
     else if (key === 'enter') this.next();
     else return;

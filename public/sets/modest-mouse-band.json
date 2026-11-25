@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "modest-mouse-band",
+  "title": "Modest Mouse: The Band",
+  "description": "From a small town outside Seattle to a No. 1 album: the people, the records and the stories behind Modest Mouse.",
+  "category": "Music",
+  "emoji": "🐭",
+  "tags": ["music", "indie rock", "modest mouse", "pacific northwest"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "In which small Washington town did Modest Mouse form?",
+      "answer": "Issaquah",
+      "details": "Issaquah sits in the foothills east of Seattle. Rain, pine trees and strip malls, all of which seep into the band's early songs.",
+      "hint": "Starts with \"Issa…\""
+    },
+    {
+      "id": "c002",
+      "prompt": "Issaquah is a short drive from which big Pacific Northwest city?",
+      "answer": "Seattle",
+      "details": "Modest Mouse came up in the long shadow of the Seattle grunge explosion, but sounded nothing like it: twitchier, stranger, and more homemade."
+    },
+    {
+      "id": "c003",
+      "prompt": "Modest Mouse's music is tied to which US region's indie scene?",
+      "answer": "The Pacific Northwest",
+      "accept": ["Northwest", "Washington"],
+      "details": "Alongside bands like Built to Spill and Death Cab for Cutie, they helped define the region's 1990s–2000s indie sound."
+    },
+    {
+      "id": "c004",
+      "prompt": "How many founding members did Modest Mouse have?",
+      "answer": "Three",
+      "accept": ["3"],
+      "details": "Isaac Brock, Jeremiah Green and Eric Judy: guitar and vocals, drums, and bass. The line-up grew a lot over the years."
+    },
+    {
+      "id": "c005",
+      "prompt": "Who is Modest Mouse's frontman, guitarist and main songwriter?",
+      "answer": "Isaac Brock",
+      "accept": ["Brock"],
+      "details": "Brock's yelping, cracked-voice delivery and his lyrics about cosmic dread, sprawl and bad decisions *are* the Modest Mouse sound.",
+      "hint": "First name shares one with a son of Abraham"
+    },
+    {
+      "id": "c006",
+      "prompt": "Who was Modest Mouse's original drummer?",
+      "answer": "Jeremiah Green",
+      "accept": ["Green"],
+      "details": "Green's restless, jazzy drumming gave even the sloppiest early songs a pulse. He was with the band from the very start."
+    },
+    {
+      "id": "c007",
+      "prompt": "Who played bass in the original Modest Mouse line-up?",
+      "answer": "Eric Judy",
+      "accept": ["Judy"],
+      "details": "Judy's melodic basslines anchor many of the band's best-loved songs. He stayed for about two decades."
+    },
+    {
+      "id": "c008",
+      "prompt": "The band's name comes from a phrase by which English writer?",
+      "answer": "Virginia Woolf",
+      "accept": ["Woolf"],
+      "details": "It comes from Woolf's description of \"modest mouse-coloured people\". Very literary origins for a band this rowdy.",
+      "hint": "Author of *Mrs Dalloway*"
+    },
+    {
+      "id": "c009",
+      "prompt": "Which Virginia Woolf short story contains the \"modest mouse-coloured people\" line?",
+      "answer": "The Mark on the Wall",
+      "accept": ["Mark on the Wall"],
+      "details": "A 1917 story in which the narrator lets her mind wander while staring at a mark on the wall. Fitting for a band of drifting, tangential lyrics."
+    },
+    {
+      "id": "c010",
+      "prompt": "Complete the 1996 debut album title: \"This Is a Long Drive for Someone with Nothing to ___\"",
+      "answer": "Think About",
+      "details": "One of indie rock's great long titles, and a perfect summary of the record: long highway miles, boredom, and big thoughts."
+    },
+    {
+      "id": "c011",
+      "prompt": "Which Seattle independent label put out Modest Mouse's first two albums?",
+      "answer": "Up Records",
+      "accept": ["Up"],
+      "details": "Up Records was a key Northwest indie label of the '90s. Modest Mouse stayed indie until the end of the decade."
+    },
+    {
+      "id": "c012",
+      "prompt": "The song \"Dramamine\" from the debut album is named after a medicine for what?",
+      "answer": "Motion sickness",
+      "accept": ["travel sickness", "car sickness", "nausea"],
+      "details": "A very on-brand title for an album all about long, queasy drives."
+    },
+    {
+      "id": "c013",
+      "prompt": "What is the band's 1997 second album, often hailed as their early masterpiece?",
+      "answer": "The Lonesome Crowded West",
+      "accept": ["Lonesome Crowded West"],
+      "details": "A sprawling, furious record about strip malls, truck stops and the paving-over of the Pacific Northwest."
+    },
+    {
+      "id": "c014",
+      "prompt": "Which song opens The Lonesome Crowded West?",
+      "answer": "Teeth Like God's Shoeshine",
+      "accept": ["Teeth Like Gods Shoeshine"],
+      "details": "It lurches between whisper and scream. A great statement of intent for the whole album."
+    },
+    {
+      "id": "c015",
+      "prompt": "Which 1999 compilation gathered Modest Mouse singles and EP tracks?",
+      "answer": "Building Nothing Out of Something",
+      "accept": ["Building Nothing"],
+      "details": "A goldmine of non-album songs. For many fans it's as essential as the studio albums."
+    },
+    {
+      "id": "c016",
+      "prompt": "Which 2000 album was the band's major-label debut?",
+      "answer": "The Moon & Antarctica",
+      "accept": ["The Moon and Antarctica", "Moon and Antarctica", "Moon & Antarctica"],
+      "details": "Bigger, colder and more cosmic: songs about space, death and the soul. Fans worried a major label would tame them. It didn't."
+    },
+    {
+      "id": "c017",
+      "prompt": "Which major label signed Modest Mouse for The Moon & Antarctica?",
+      "answer": "Epic Records",
+      "accept": ["Epic"],
+      "details": "Epic stuck with them, and a few years later that patience paid off in a very big way."
+    },
+    {
+      "id": "c018",
+      "prompt": "Which song opens The Moon & Antarctica?",
+      "answer": "3rd Planet",
+      "accept": ["Third Planet"],
+      "details": "The third planet from the Sun is, of course, Earth. The song is a woozy, philosophical look at life on it."
+    },
+    {
+      "id": "c019",
+      "prompt": "Who produced The Moon & Antarctica?",
+      "answer": "Brian Deck",
+      "accept": ["Deck"],
+      "details": "Deck helped give the album its spacious, detailed sound. More headphones record than garage record."
+    },
+    {
+      "id": "c020",
+      "prompt": "Which 2001 release finally put out the band's earliest mid-'90s recordings?",
+      "answer": "Sad Sappy Sucker",
+      "details": "A peek at the scrappy, lo-fi Modest Mouse from before the debut album."
+    },
+    {
+      "id": "c021",
+      "prompt": "What was Isaac Brock's side project, which released Sharpen Your Teeth in 2002?",
+      "answer": "Ugly Casanova",
+      "details": "A looser, eerier outlet for songs that didn't fit Modest Mouse."
+    },
+    {
+      "id": "c022",
+      "prompt": "Complete the 2004 album title: \"Good News for People Who Love ___\"",
+      "answer": "Bad News",
+      "details": "The record that took them from cult heroes to radio staples, without losing the weirdness."
+    },
+    {
+      "id": "c023",
+      "prompt": "Which 2004 single became Modest Mouse's biggest hit?",
+      "answer": "Float On",
+      "details": "An unusually upbeat song for Brock: a shrug-it-off anthem that took the band onto mainstream radio and TV.",
+      "hint": "Staying above water…"
+    },
+    {
+      "id": "c024",
+      "prompt": "Which other 2004 single, \"The World at ___\", came from Good News for People Who Love Bad News?",
+      "answer": "Large",
+      "details": "\"The World at Large\" opens the album proper: a gentle, drifting song about moving on."
+    },
+    {
+      "id": "c025",
+      "prompt": "Good News for People Who Love Bad News earned a Grammy nomination for best album in which genre?",
+      "answer": "Alternative",
+      "accept": ["Alternative music", "Best Alternative Music Album"],
+      "details": "A big moment for a band that had spent the '90s on a small Seattle indie label."
+    },
+    {
+      "id": "c026",
+      "prompt": "Which drummer stepped in on Good News while Jeremiah Green took a break from the band?",
+      "answer": "Benjamin Weikel",
+      "accept": ["Weikel", "Ben Weikel"],
+      "details": "Green stepped away in 2003 and came back the following year."
+    },
+    {
+      "id": "c027",
+      "prompt": "Benjamin Weikel also drummed in which Oregon band?",
+      "answer": "The Helio Sequence",
+      "accept": ["Helio Sequence"],
+      "details": "The Helio Sequence is a duo from the Portland area. Weikel was a natural fit as a Northwest indie drummer."
+    },
+    {
+      "id": "c028",
+      "prompt": "Which twangy instrument does Isaac Brock pick up on songs like \"Satin in a Coffin\"?",
+      "answer": "Banjo",
+      "details": "Brock's banjo gives some of the band's darkest songs a creaky, back-porch-at-midnight feel."
+    },
+    {
+      "id": "c029",
+      "prompt": "Which legendary guitarist joined Modest Mouse in 2006?",
+      "answer": "Johnny Marr",
+      "accept": ["Marr"],
+      "details": "A genuine indie legend joining a band that grew up on his records. Fans could hardly believe it."
+    },
+    {
+      "id": "c030",
+      "prompt": "Before Modest Mouse, Johnny Marr was the guitarist in which famous Manchester band?",
+      "answer": "The Smiths",
+      "accept": ["Smiths"],
+      "details": "His chiming, jangly guitar work with The Smiths in the 1980s influenced a whole generation of indie bands."
+    },
+    {
+      "id": "c031",
+      "prompt": "Which 2007 album was Modest Mouse's first to debut at No. 1 in the US?",
+      "answer": "We Were Dead Before the Ship Even Sank",
+      "accept": ["We Were Dead"],
+      "details": "Topping the Billboard 200 with an album this odd and seafaring was a huge win for weird music. See the companion set for more."
+    },
+    {
+      "id": "c032",
+      "prompt": "Johnny Marr went on to join which band, from Wakefield in England, after Modest Mouse?",
+      "answer": "The Cribs",
+      "accept": ["Cribs"],
+      "details": "Marr's time in Modest Mouse lasted only a few years, but he played on one of their most successful albums."
+    },
+    {
+      "id": "c033",
+      "prompt": "Which 2009 EP gathered leftover songs from the Good News and We Were Dead sessions?",
+      "answer": "No One's First, and You're Next",
+      "accept": ["No One's First and You're Next", "No Ones First and Youre Next"],
+      "details": "Proof that the band's leftovers are better than a lot of bands' singles."
+    },
+    {
+      "id": "c034",
+      "prompt": "What is the name of Isaac Brock's own record label imprint?",
+      "answer": "Glacial Pace",
+      "details": "Brock has used it to put out records by other artists. The name could double as a joke about how slowly Modest Mouse albums arrive (see the next card)."
+    },
+    {
+      "id": "c035",
+      "prompt": "Which founding member left Modest Mouse in the early 2010s?",
+      "answer": "Eric Judy",
+      "accept": ["Judy"],
+      "details": "That left Brock and Green as the two remaining original members."
+    },
+    {
+      "id": "c036",
+      "prompt": "Which 2015 album ended an eight-year wait for a new Modest Mouse record?",
+      "answer": "Strangers to Ourselves",
+      "details": "Eight years between albums: \"glacial pace\" indeed. It was worth the wait for most fans."
+    },
+    {
+      "id": "c037",
+      "prompt": "Which song was the lead single from Strangers to Ourselves?",
+      "answer": "Lampshades on Fire",
+      "details": "A bouncy, catchy single that showed the band hadn't lost its bite after eight years away."
+    },
+    {
+      "id": "c038",
+      "prompt": "What is Modest Mouse's 2021 studio album?",
+      "answer": "The Golden Casket",
+      "accept": ["Golden Casket"],
+      "details": "Their first album of the 2020s, and proof the band was still making strange, restless records nearly 30 years in."
+    },
+    {
+      "id": "c039",
+      "prompt": "In which year did founding drummer Jeremiah Green die?",
+      "answer": "2022",
+      "details": "Green died of cancer at the very end of 2022. He had drummed with the band since the very beginning, and fans remember him as its heartbeat."
+    }
+  ]
+}

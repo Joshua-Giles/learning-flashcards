@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { shouldIgnoreShortcut } from './core/keyboard';
 import { StorageService } from './core/storage.service';
+import { SearchService } from './features/search/search.service';
 import { Sidebar } from './shell/sidebar';
 import { Toaster } from './shell/toaster';
 import { TopBar } from './shell/top-bar';
@@ -8,7 +10,7 @@ import { TopBar } from './shell/top-bar';
 @Component({
   selector: 'lf-root',
   imports: [RouterOutlet, RouterLink, TopBar, Sidebar, Toaster],
-  host: { class: 'block min-h-dvh' },
+  host: { class: 'block min-h-dvh', '(document:keydown)': 'onKeydown($event)' },
   template: `
     <lf-top-bar />
     @if (!storage.available()) {
@@ -40,4 +42,14 @@ import { TopBar } from './shell/top-bar';
 })
 export class App {
   protected readonly storage = inject(StorageService);
+  private readonly search = inject(SearchService);
+
+  /** Global shortcuts: Ctrl/⌘+K or "/" opens search. */
+  protected onKeydown(event: KeyboardEvent): void {
+    const cmdK = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k';
+    const slash = event.key === '/' && !shouldIgnoreShortcut(event);
+    if (!cmdK && !slash) return;
+    event.preventDefault();
+    void this.search.open();
+  }
 }

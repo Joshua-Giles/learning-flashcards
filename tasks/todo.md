@@ -220,9 +220,9 @@ Add one small sample set (about 8 cards) for development.
 **Description:** A command palette built on a CDK overlay. It opens from the top-bar icon, `Ctrl/⌘+K` or `/`. A Fuse.js index covers set metadata and card text, built lazily the first time search opens. Results are grouped (Sets / Cards) and navigable with the keyboard. Choosing a card deep-links to study mode at that card (`?card=c014`).
 **Acceptance criteria:**
 
-- [ ] The overlay takes up no layout space while closed; the focus trap works, and Esc returns focus to where it was
-- [ ] "buongorno" finds the Buongiorno card, and results appear in < 100ms with all sets loaded
-- [ ] Enter on a card result opens study mode on that card
+- [x] The overlay takes up no layout space while closed; the focus trap works, and Esc returns focus to where it was
+- [x] "buongorno" finds the Buongiorno card, and results appear in < 100ms with all sets loaded
+- [x] Enter on a card result opens study mode on that card
       **Verification:** component test for keyboard navigation; manual timing in DevTools
       **Dependencies:** T5
       **Files:** `features/search/search-overlay.*`, `core/search-index.ts`, `shell/top-bar.*`
@@ -233,9 +233,9 @@ Add one small sample set (about 8 cards) for development.
 **Description:** A `NotebookStore` (stored in the `lf:state` document). A quick-capture dialog opens from the `?` key or a button on study and quiz cards, with the set and card filled in automatically. The `/questions` page lists questions with status and set filters, editing, deleting and resolving. "Copy for Claude" copies the prompt format from SPEC F7, with a fallback when the clipboard API isn't available. "Download .json" saves the same data. Exporting marks questions `sent`.
 **Acceptance criteria:**
 
-- [ ] A question can be captured in ≤ 3 keystrokes plus its text from any card, and it shows the set and card it came from
-- [ ] The copied text matches the spec format exactly (snapshot test)
-- [ ] Questions persist and can be filtered by status
+- [x] A question can be captured in ≤ 3 keystrokes plus its text from any card, and it shows the set and card it came from
+- [x] The copied text matches the spec format exactly (snapshot test)
+- [x] Questions persist and can be filtered by status
       **Verification:** unit test for the export formatter; Playwright: capture → copy → read the clipboard
       **Dependencies:** T8 (storage), T5/T7 (card hooks)
       **Files:** `core/notebook-store.ts`, `core/logic/question-export.ts`, `features/notebook/*`, `shared/capture-dialog.*`
@@ -257,8 +257,8 @@ Add one small sample set (about 8 cards) for development.
 Tune the validator's similarity threshold on the sample set.
 **Acceptance criteria:**
 
-- [ ] A fresh Claude session, given only CLAUDE.md and the guide, could produce a valid set
-- [ ] The guide explains exactly how to use the "Copy for Claude" output
+- [x] A fresh Claude session, given only CLAUDE.md and the guide, could produce a valid set
+- [x] The guide explains exactly how to use the "Copy for Claude" output
       **Verification:** a doc review with you at Checkpoint D
       **Dependencies:** T2
       **Files:** `docs/content-guide.md`, `CLAUDE.md`, `scripts/check-sets.mjs`
@@ -269,8 +269,8 @@ Tune the validator's similarity threshold on the sample set.
 **Description:** The band set is the main one. Write `modest-mouse-band` (about 40 cards: formation in Issaquah, members and line-up changes, key eras and labels, sound and influences, the discography arc, notable songs, fun stories). Include a few cards on where _We Were Dead_ fits in the band's story. Then write the small companion set `modest-mouse-we-were-dead` (about 12 cards: highlights, key tracks, Johnny Marr's involvement, how it was made, one or two good stories), with no duplicates of the band set. Leave out facts I'm not confident about.
 **Acceptance criteria:**
 
-- [ ] Both sets pass `sets:check` with zero errors and zero duplicate warnings
-- [ ] All answers are short, and every card has `details`
+- [x] Both sets pass `sets:check` with zero errors and zero duplicate warnings
+- [x] All answers are short, and every card has `details`
       **Verification:** `npm run sets:check`; you read them through for accuracy and tone
       **Dependencies:** T14
       **Files:** `public/sets/modest-mouse-band.json`, `public/sets/modest-mouse-we-were-dead.json`
@@ -289,8 +289,8 @@ Tune the validator's similarity threshold on the sample set.
 They're travel- and conversation-focused. Use `accept` for common variants and keep accents correct.
 **Acceptance criteria:**
 
-- [ ] All 5 sets pass `sets:check`, with no duplicates between sets
-- [ ] Prompts make it clear which direction to answer in (for example "How do you say… in Italian?")
+- [x] All 5 sets pass `sets:check`, with no duplicates between sets
+- [x] Prompts make it clear which direction to answer in (for example "How do you say… in Italian?")
       **Verification:** `npm run sets:check`; quiz yourself on one set as a smoke test
       **Dependencies:** T14
       **Files:** `public/sets/italian-*.json`
@@ -298,7 +298,7 @@ They're travel- and conversation-focused. Use `accept` for common variants and k
 
 ### ✅ Checkpoint D: Feature complete
 
-- [ ] All V1 features work together, with 7 starter sets loaded
+- [x] All V1 features work together, with 7 starter sets loaded
 - [ ] **Review with you: content accuracy and tone, and the notebook → Claude loop tried once for real**
 
 ---

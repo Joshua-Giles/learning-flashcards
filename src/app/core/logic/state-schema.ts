@@ -4,6 +4,7 @@ import {
   DEFAULT_DAILY_GOAL,
   DayStats,
   MasteryBox,
+  Question,
   STATE_VERSION,
   SetProgress,
   createInitialState,
@@ -22,7 +23,10 @@ const optDay = (v: unknown) => v === undefined || isLocalDay(v);
  * Migrations from version N to N+1. Add an entry when STATE_VERSION is bumped,
  * e.g. `1: (s) => ({ ...s, version: 2, newField: … })`, plus a test.
  */
-const MIGRATIONS: Record<number, (state: Obj) => Obj> = {};
+const MIGRATIONS: Record<number, (state: Obj) => Obj> = {
+  // v2 adds the questions notebook.
+  1: (s) => ({ ...s, version: 2, questions: [] }),
+};
 
 function migrate(raw: Obj): Obj {
   let state = raw;
@@ -97,6 +101,24 @@ function parseDay(v: unknown): DayStats | undefined {
   return { points, cardsReviewed, goalMet };
 }
 
+function parseQuestion(v: unknown): Question | undefined {
+  if (!isObj(v)) return undefined;
+  const { id, text, setId, cardId, createdAt, status } = v;
+  if (typeof id !== 'string' || !id || typeof text !== 'string' || !text.trim()) return undefined;
+  if (typeof createdAt !== 'string' || Number.isNaN(Date.parse(createdAt))) return undefined;
+  if (status !== 'open' && status !== 'sent' && status !== 'resolved') return undefined;
+  if (setId !== undefined && typeof setId !== 'string') return undefined;
+  if (cardId !== undefined && (typeof cardId !== 'string' || setId === undefined)) return undefined;
+  return {
+    id,
+    text,
+    ...(setId ? { setId } : {}),
+    ...(cardId ? { cardId } : {}),
+    createdAt,
+    status,
+  };
+}
+
 function parseRecord<T>(
   v: unknown,
   parseValue: (x: unknown) => T | undefined,
@@ -133,6 +155,9 @@ export function parseState(raw: unknown): AppState {
     cards: parseRecord(s['cards'], parseCard, (k) => /^[^/]+\/[^/]+$/.test(k)),
     sets: parseRecord(s['sets'], parseSet, (k) => k.length > 0),
     days: parseRecord(s['days'], parseDay, isLocalDay),
+    questions: Array.isArray(s['questions'])
+      ? s['questions'].flatMap((q) => parseQuestion(q) ?? [])
+      : [],
   };
 }
 

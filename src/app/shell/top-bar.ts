@@ -1,14 +1,23 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LucideMenu, LucideMonitor, LucideMoon, LucideSun } from '@lucide/angular';
+import { LucideMenu, LucideMonitor, LucideMoon, LucideSearch, LucideSun } from '@lucide/angular';
 import { LayoutService } from '../core/layout.service';
 import { ProgressStore } from '../core/progress-store';
 import { ProgressRing } from '../shared/progress-ring';
 import { ThemeService } from '../core/theme.service';
+import { SearchService } from '../features/search/search.service';
 
 @Component({
   selector: 'lf-top-bar',
-  imports: [RouterLink, ProgressRing, LucideMenu, LucideSun, LucideMoon, LucideMonitor],
+  imports: [
+    RouterLink,
+    ProgressRing,
+    LucideMenu,
+    LucideSearch,
+    LucideSun,
+    LucideMoon,
+    LucideMonitor,
+  ],
   host: {
     class:
       'sticky top-0 z-30 flex h-14 items-center gap-2 border-b border-line bg-bg/85 px-3 backdrop-blur',
@@ -32,6 +41,17 @@ import { ThemeService } from '../core/theme.service';
     </a>
 
     <div class="ml-auto flex items-center gap-1">
+      <button
+        type="button"
+        class="icon-btn"
+        (click)="search.open()"
+        aria-label="Search (Ctrl+K)"
+        title="Search (Ctrl+K or /)"
+        aria-keyshortcuts="Control+K Meta+K /"
+        data-testid="search-open"
+      >
+        <svg lucideSearch [size]="20"></svg>
+      </button>
       <a
         routerLink="/stats"
         class="flex items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-surface-2"
@@ -86,6 +106,7 @@ export class TopBar {
   protected readonly theme = inject(ThemeService);
 
   protected readonly progress = inject(ProgressStore);
+  protected readonly search = inject(SearchService);
 
   protected readonly statusLabel = computed(() => {
     const { points } = this.progress.todayStats();

@@ -34,13 +34,24 @@ describe('parseState', () => {
       cards: { 'set-a/c001': validCard },
       sets: { 'set-a': validSet },
       days: { '2026-11-20': { points: 60, cardsReviewed: 12, goalMet: true } },
+      questions: [
+        {
+          id: 'q1',
+          text: 'Why "Modest Mouse"?',
+          setId: 'set-a',
+          cardId: 'c001',
+          createdAt: '2026-11-20T18:00:00.000Z',
+          status: 'open',
+        },
+        { id: 'q2', text: 'General one', createdAt: '2026-11-21T09:00:00.000Z', status: 'sent' },
+      ],
     };
     expect(parseState(structuredClone(state))).toEqual(state);
   });
 
   it('drops malformed entries instead of failing', () => {
     const state = parseState({
-      version: 1,
+      version: STATE_VERSION,
       settings: { dailyGoal: -5 },
       cards: {
         'set-a/c001': validCard,
@@ -58,7 +69,41 @@ describe('parseState', () => {
   });
 
   it('fills missing sections with defaults', () => {
-    expect(parseState({ version: 1 })).toEqual(createInitialState());
+    expect(parseState({ version: STATE_VERSION })).toEqual(createInitialState());
+  });
+
+  it('migrates a v1 state (no notebook) to the current version', () => {
+    const v1 = {
+      version: 1,
+      settings: { dailyGoal: 60 },
+      cards: { 'set-a/c001': validCard },
+      sets: {},
+      days: {},
+    };
+    const state = parseState(v1);
+    expect(state.version).toBe(STATE_VERSION);
+    expect(state.questions).toEqual([]);
+    expect(state.settings.dailyGoal).toBe(60);
+    expect(state.cards['set-a/c001']).toEqual(validCard);
+  });
+
+  it('drops malformed questions', () => {
+    const state = parseState({
+      version: STATE_VERSION,
+      questions: [
+        { id: 'ok', text: 'Fine?', createdAt: '2026-11-20T00:00:00Z', status: 'open' },
+        { id: 'blank', text: '   ', createdAt: '2026-11-20T00:00:00Z', status: 'open' },
+        { id: 'bad-status', text: 'x', createdAt: '2026-11-20T00:00:00Z', status: 'done' },
+        {
+          id: 'card-no-set',
+          text: 'x',
+          cardId: 'c1',
+          createdAt: '2026-11-20T00:00:00Z',
+          status: 'open',
+        },
+      ],
+    });
+    expect(state.questions.map((q) => q.id)).toEqual(['ok']);
   });
 
   it('rejects non-objects and states from a newer app version', () => {

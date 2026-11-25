@@ -1,6 +1,127 @@
 {
   "sets": [
     {
+      "id": "italian-cafe-food",
+      "title": "Italian: At the Café & Restaurant",
+      "description": "Order coffee like a local, read a menu, and ask for the bill, plus the unwritten rules (cappuccino after lunch? Never!).",
+      "category": "Languages",
+      "emoji": "☕",
+      "tags": [
+        "italian",
+        "beginner",
+        "food",
+        "café",
+        "restaurant"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 30,
+      "quizzableCount": 30
+    },
+    {
+      "id": "italian-essential-verbs",
+      "title": "Italian: Essere, Avere & Friends",
+      "description": "The two verbs everything else leans on, plus a handful of everyday action words and some classic \"avere\" expressions.",
+      "category": "Languages",
+      "emoji": "🗣️",
+      "tags": [
+        "italian",
+        "beginner",
+        "verbs",
+        "grammar"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 25,
+      "quizzableCount": 25
+    },
+    {
+      "id": "italian-travel",
+      "title": "Italian: Getting Around",
+      "description": "Trains, tickets, directions, hotels and signs: the words that get you from the airport to your dinner table.",
+      "category": "Languages",
+      "emoji": "🚆",
+      "tags": [
+        "italian",
+        "beginner",
+        "travel",
+        "directions"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 25,
+      "quizzableCount": 25
+    },
+    {
+      "id": "italian-greetings",
+      "title": "Italian: Greetings & Basics",
+      "description": "Ciao! The phrases you'll use in your first hour in Italy: hellos, goodbyes, thanks and polite survival lines.",
+      "category": "Languages",
+      "emoji": "👋",
+      "tags": [
+        "italian",
+        "beginner",
+        "greetings",
+        "phrases"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 30,
+      "quizzableCount": 30
+    },
+    {
+      "id": "italian-numbers-time",
+      "title": "Italian: Numbers, Days & Time",
+      "description": "Count, tell the day and talk about today, tomorrow and yesterday. Plus why Italian weekdays are named after planets.",
+      "category": "Languages",
+      "emoji": "🔢",
+      "tags": [
+        "italian",
+        "beginner",
+        "numbers",
+        "time",
+        "days"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 30,
+      "quizzableCount": 30
+    },
+    {
+      "id": "modest-mouse-band",
+      "title": "Modest Mouse: The Band",
+      "description": "From a small town outside Seattle to a No. 1 album: the people, the records and the stories behind Modest Mouse.",
+      "category": "Music",
+      "emoji": "🐭",
+      "tags": [
+        "music",
+        "indie rock",
+        "modest mouse",
+        "pacific northwest"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 39,
+      "quizzableCount": 39
+    },
+    {
+      "id": "modest-mouse-we-were-dead",
+      "title": "Modest Mouse: We Were Dead Before the Ship Even Sank",
+      "description": "A companion to the band set: the highlights, key tracks and stories behind the 2007 album that went to No. 1.",
+      "category": "Music",
+      "emoji": "🚢",
+      "tags": [
+        "music",
+        "indie rock",
+        "modest mouse",
+        "album"
+      ],
+      "version": 1,
+      "updated": "2026-11-25",
+      "cardCount": 13,
+      "quizzableCount": 13
+    },
+    {
       "id": "sample-solar-system",
       "title": "Sample: Our Solar System",
       "description": "A tiny warm-up set for testing the app — eight planets' worth of space facts.",

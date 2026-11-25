@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "italian-cafe-food",
+  "title": "Italian: At the Café & Restaurant",
+  "description": "Order coffee like a local, read a menu, and ask for the bill, plus the unwritten rules (cappuccino after lunch? Never!).",
+  "category": "Languages",
+  "emoji": "☕",
+  "tags": ["italian", "beginner", "food", "café", "restaurant"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "What do you order in Italy to get an espresso?",
+      "answer": "Un caffè",
+      "accept": ["caffè", "caffe", "espresso"],
+      "details": "In Italy *caffè* simply *means* espresso. Drink it standing at the bar like a local."
+    },
+    {
+      "id": "c002",
+      "prompt": "Traditionally, what time of day do Italians drink cappuccino?",
+      "answer": "Morning",
+      "accept": ["in the morning", "breakfast", "the morning"],
+      "details": "Milky coffee is a breakfast thing. Ordering one after a big lunch marks you as a tourist (they'll still make it, with a smile)."
+    },
+    {
+      "id": "c003",
+      "prompt": "What does *macchiato* literally mean?",
+      "answer": "Stained",
+      "accept": ["spotted", "marked"],
+      "details": "An espresso \"stained\" with a dash of milk. The giant caramel versions abroad would baffle most Italian baristas."
+    },
+    {
+      "id": "c004",
+      "prompt": "What's the Italian word for \"water\"?",
+      "answer": "Acqua",
+      "details": "AH-kwah. You'll be asked: *naturale o frizzante?* (next two cards)."
+    },
+    {
+      "id": "c005",
+      "prompt": "How do you ask for sparkling water?",
+      "answer": "Acqua frizzante",
+      "accept": ["frizzante", "acqua gassata"],
+      "details": "*Frizzante* = fizzy. Some regions say *gassata*."
+    },
+    {
+      "id": "c006",
+      "prompt": "How do you ask for still water?",
+      "answer": "Acqua naturale",
+      "accept": ["naturale", "acqua liscia"],
+      "details": "*Liscia* (\"smooth\") also means still. Restaurants usually bring bottled water, not tap."
+    },
+    {
+      "id": "c007",
+      "prompt": "What's the Italian word for \"wine\"?",
+      "answer": "Vino",
+      "details": "Italy grows a huge number of native grape varieties. The house wine (*vino della casa*) is often excellent value."
+    },
+    {
+      "id": "c008",
+      "prompt": "How do you order \"red wine\"?",
+      "answer": "Vino rosso",
+      "accept": ["rosso"],
+      "details": "Adjectives usually come *after* the noun. White wine is *vino bianco*."
+    },
+    {
+      "id": "c009",
+      "prompt": "What's the Italian word for \"beer\"?",
+      "answer": "Birra",
+      "details": "Roll that double *rr*: BEER-rah. *Una birra media* = a medium beer."
+    },
+    {
+      "id": "c010",
+      "prompt": "What's the Italian word for \"bread\"?",
+      "answer": "Pane",
+      "details": "PAH-neh. Tuscan bread is traditionally made without salt, which surprises a lot of visitors."
+    },
+    {
+      "id": "c011",
+      "prompt": "What's the Italian word for \"cheese\"?",
+      "answer": "Formaggio",
+      "details": "From *forma*, the mould cheese was pressed in. French *fromage* comes from the same root."
+    },
+    {
+      "id": "c012",
+      "prompt": "What's the polite way to start an order (\"I would like…\")?",
+      "answer": "Vorrei",
+      "details": "The most useful word in any café: *Vorrei un caffè, per favore.* Much softer than *voglio* (\"I want\")."
+    },
+    {
+      "id": "c013",
+      "prompt": "How do you ask for \"a table for two\"?",
+      "answer": "Un tavolo per due",
+      "accept": ["tavolo per due"],
+      "details": "Swap the number as needed: *per quattro*, *per sei*…"
+    },
+    {
+      "id": "c014",
+      "prompt": "What's the Italian word for \"menu\"?",
+      "answer": "Menù",
+      "accept": ["menu", "il menù", "la lista"],
+      "details": "Spelled with an accent in Italian. In smaller places the day's dishes might just be spoken aloud."
+    },
+    {
+      "id": "c015",
+      "prompt": "How do you ask for the bill?",
+      "answer": "Il conto, per favore",
+      "accept": ["conto per favore", "il conto"],
+      "details": "In Italy the waiter won't bring the bill until you ask. Lingering over a meal is the point!"
+    },
+    {
+      "id": "c016",
+      "prompt": "What might *coperto* on your restaurant bill be?",
+      "answer": "Cover charge",
+      "accept": ["cover", "service charge", "bread and cover charge"],
+      "details": "A per-person charge for bread and table setting. Normal and legal, not a scam."
+    },
+    {
+      "id": "c017",
+      "prompt": "What do you wish people before they eat (\"Enjoy your meal\")?",
+      "answer": "Buon appetito",
+      "details": "Expect it back: *Grazie, altrettanto!* (\"Thanks, same to you!\")."
+    },
+    {
+      "id": "c018",
+      "prompt": "How do you say \"delicious\" (\"really good\") about food?",
+      "answer": "Buonissimo",
+      "accept": ["delizioso", "squisito", "buono"],
+      "details": "*-issimo* turns \"good\" into \"super good\". It works on lots of adjectives: *bellissimo*, *carissimo*…"
+    },
+    {
+      "id": "c019",
+      "prompt": "What's the Italian word for \"breakfast\"?",
+      "answer": "Colazione",
+      "accept": ["prima colazione"],
+      "details": "Typically light and sweet: a cappuccino and a *cornetto* (Italy's croissant), often at the bar."
+    },
+    {
+      "id": "c020",
+      "prompt": "What's the Italian word for \"lunch\"?",
+      "answer": "Pranzo",
+      "details": "Traditionally the main meal of the day, and some shops still close for a long lunch break."
+    },
+    {
+      "id": "c021",
+      "prompt": "What's the Italian word for \"dinner\"?",
+      "answer": "Cena",
+      "details": "CHEH-nah. Dinner starts late: 8 pm or later is normal, especially in the south."
+    },
+    {
+      "id": "c022",
+      "prompt": "In an Italian meal, what is the *antipasto*?",
+      "answer": "Starter",
+      "accept": ["appetizer", "appetiser", "the starter"],
+      "details": "*Anti* = before, *pasto* = meal. It has nothing to do with being \"against pasta\"!"
+    },
+    {
+      "id": "c023",
+      "prompt": "What's typically served as the *primo* course?",
+      "answer": "Pasta",
+      "accept": ["pasta or rice", "risotto", "rice", "soup"],
+      "details": "The \"first\" course: pasta, risotto or soup. It's *not* the main event."
+    },
+    {
+      "id": "c024",
+      "prompt": "What's typically served as the *secondo* course?",
+      "answer": "Meat or fish",
+      "accept": ["meat", "fish", "main course"],
+      "details": "Sides (*contorni*) are ordered separately. It's no faux pas to skip courses; few people eat them all every day."
+    },
+    {
+      "id": "c025",
+      "prompt": "What is the *dolce* course?",
+      "answer": "Dessert",
+      "details": "*Dolce* = sweet, as in *dolce vita* (the sweet life)."
+    },
+    {
+      "id": "c026",
+      "prompt": "What's the Italian word for \"ice cream\"?",
+      "answer": "Gelato",
+      "details": "Tip: bright, puffed-up mounds are often a bad sign. Good *gelaterie* keep it flat or in covered tins."
+    },
+    {
+      "id": "c027",
+      "prompt": "What's the Italian word for \"fork\"?",
+      "answer": "Forchetta",
+      "details": "Twirl spaghetti on your *forchetta* against the plate, not a spoon, at least in Italy."
+    },
+    {
+      "id": "c028",
+      "prompt": "What's the Italian word for \"knife\"?",
+      "answer": "Coltello",
+      "details": "Never cut your spaghetti with one. It's practically a crime!"
+    },
+    {
+      "id": "c029",
+      "prompt": "What does pasta cooked *al dente* literally mean?",
+      "answer": "To the tooth",
+      "accept": ["firm to the bite", "to the teeth"],
+      "details": "Cooked so it still has a little bite. Italian packets often list a separate *al dente* cooking time."
+    },
+    {
+      "id": "c030",
+      "prompt": "In Italy, what is a *bar* mainly for?",
+      "answer": "Coffee",
+      "accept": ["café", "espresso", "coffee and snacks"],
+      "details": "An Italian *bar* is a café: espresso, pastries and sandwiches, from early morning. Some do drinks too."
+    }
+  ]
+}

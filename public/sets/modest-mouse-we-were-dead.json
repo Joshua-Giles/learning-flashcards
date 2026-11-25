@@ -1,0 +1,97 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "modest-mouse-we-were-dead",
+  "title": "Modest Mouse: We Were Dead Before the Ship Even Sank",
+  "description": "A companion to the band set: the highlights, key tracks and stories behind the 2007 album that went to No. 1.",
+  "category": "Music",
+  "emoji": "🚢",
+  "tags": ["music", "indie rock", "modest mouse", "album"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "In what year was We Were Dead Before the Ship Even Sank released?",
+      "answer": "2007",
+      "details": "It arrived three years after Good News for People Who Love Bad News, with the band riding high on \"Float On\"."
+    },
+    {
+      "id": "c002",
+      "prompt": "Where did We Were Dead debut on the US Billboard 200 album chart?",
+      "answer": "No. 1",
+      "accept": ["1", "number one", "one", "first", "1st"],
+      "details": "The band's first No. 1, which is remarkable for an album this odd and seafaring."
+    },
+    {
+      "id": "c003",
+      "prompt": "Which big-name new member co-wrote and played guitar across this album?",
+      "answer": "Johnny Marr",
+      "accept": ["Marr"],
+      "details": "The former Smiths guitarist's chiming parts are woven all through the record. This is the album he's on."
+    },
+    {
+      "id": "c004",
+      "prompt": "What recurring theme runs through the album's title and songs?",
+      "answer": "The sea",
+      "accept": ["sea", "ocean", "the ocean", "sailing", "ships", "nautical"],
+      "details": "Ships, sailors, sinking and drowning run all the way through it. Even the title is a shipwreck joke."
+    },
+    {
+      "id": "c005",
+      "prompt": "Which song opens the album?",
+      "answer": "March into the Sea",
+      "details": "Brock is at full howl from the start, and the title announces the nautical theme straight away."
+    },
+    {
+      "id": "c006",
+      "prompt": "What was the album's lead single?",
+      "answer": "Dashboard",
+      "details": "A funky, strutting single in the \"Float On\" tradition: upbeat music over lyrics about things going wrong."
+    },
+    {
+      "id": "c007",
+      "prompt": "Complete the single's title, which fits the album's seafaring theme: \"___ the Boat\"",
+      "answer": "Missed",
+      "details": "\"Missed the Boat\" is one of the album's gentlest, prettiest songs, with backing vocals from a famous guest (next card)."
+    },
+    {
+      "id": "c008",
+      "prompt": "Which frontman of The Shins sings backing vocals on the album?",
+      "answer": "James Mercer",
+      "accept": ["Mercer"],
+      "details": "Mercer's sweet high harmonies are a lovely contrast to Brock's rasp."
+    },
+    {
+      "id": "c009",
+      "prompt": "Who produced We Were Dead Before the Ship Even Sank?",
+      "answer": "Dennis Herring",
+      "accept": ["Herring"],
+      "details": "Herring had also worked with the band on Good News for People Who Love Bad News."
+    },
+    {
+      "id": "c010",
+      "prompt": "Which track title mashes together \"steam engine\" and \"genius\"?",
+      "answer": "Steam Engenius",
+      "details": "Brock loves wordplay. This one sounds like a steampunk invention."
+    },
+    {
+      "id": "c011",
+      "prompt": "Which song title pictures an insect stuck in a glass container?",
+      "answer": "Fly Trapped in a Jar",
+      "details": "A very Modest Mouse image: something small, trapped, buzzing in circles."
+    },
+    {
+      "id": "c012",
+      "prompt": "Which track title sounds like \"parting of the sea\" but isn't?",
+      "answer": "Parting of the Sensory",
+      "details": "Fans often single it out as one of the album's most dramatic songs."
+    },
+    {
+      "id": "c013",
+      "prompt": "Which song title describes a small roadside place to sleep?",
+      "answer": "Little Motel",
+      "details": "One of the album's slower, more tender moments, in contrast to the rowdy singles."
+    }
+  ]
+}

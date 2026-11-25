@@ -1,0 +1,199 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "italian-numbers-time",
+  "title": "Italian: Numbers, Days & Time",
+  "description": "Count, tell the day and talk about today, tomorrow and yesterday. Plus why Italian weekdays are named after planets.",
+  "category": "Languages",
+  "emoji": "🔢",
+  "tags": ["italian", "beginner", "numbers", "time", "days"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "What is \"one\" in Italian?",
+      "answer": "Uno",
+      "details": "Before a noun it becomes *un* or *una*: *un caffè*, *una birra*."
+    },
+    {
+      "id": "c002",
+      "prompt": "What is \"two\" in Italian?",
+      "answer": "Due",
+      "details": "Pronounced DOO-eh, with two syllables. Handy for *due caffè* when you're not alone."
+    },
+    {
+      "id": "c003",
+      "prompt": "What is \"three\" in Italian?",
+      "answer": "Tre",
+      "details": "It sounds like English \"tray\", minus the glide at the end."
+    },
+    {
+      "id": "c004",
+      "prompt": "What is \"four\" in Italian?",
+      "answer": "Quattro",
+      "details": "As in *pizza quattro formaggi*, the four-cheese pizza."
+    },
+    {
+      "id": "c005",
+      "prompt": "What is \"five\" in Italian?",
+      "answer": "Cinque",
+      "details": "CHEEN-kweh. The *ci* is a \"ch\" sound, like in *ciao*."
+    },
+    {
+      "id": "c006",
+      "prompt": "What is \"six\" in Italian?",
+      "answer": "Sei",
+      "details": "Fun double duty: *sei* also means \"you are\" (*tu sei*). Context will tell you which!"
+    },
+    {
+      "id": "c007",
+      "prompt": "What is \"seven\" in Italian?",
+      "answer": "Sette",
+      "details": "Double consonants matter: hold the *tt* a beat longer, SET-teh."
+    },
+    {
+      "id": "c008",
+      "prompt": "What is \"eight\" in Italian?",
+      "answer": "Otto",
+      "details": "Like the name Otto, and *otto e mezzo* (8½) is Fellini's famous film."
+    },
+    {
+      "id": "c009",
+      "prompt": "What is \"nine\" in Italian?",
+      "answer": "Nove",
+      "details": "Close to Latin *novem*, which is also where English \"November\" comes from (it was the 9th Roman month)."
+    },
+    {
+      "id": "c010",
+      "prompt": "What is \"ten\" in Italian?",
+      "answer": "Dieci",
+      "details": "dee-EH-chee. From 11 to 16 the numbers end in *-dici*: *undici, dodici, tredici…*"
+    },
+    {
+      "id": "c011",
+      "prompt": "What is \"eleven\" in Italian?",
+      "answer": "Undici",
+      "details": "*Un(o) + dici* = one-and-ten."
+    },
+    {
+      "id": "c012",
+      "prompt": "Which number is *diciassette*?",
+      "answer": "17",
+      "accept": ["seventeen"],
+      "details": "From 17 up the pattern flips to ten-and-seven (*dici-a-sette*). In Italian folklore 17, not 13, is the unlucky number!"
+    },
+    {
+      "id": "c013",
+      "prompt": "What is \"twenty\" in Italian?",
+      "answer": "Venti",
+      "details": "Also the plural of *vento* (wind), and the \"venti\" coffee size that a famous chain borrowed."
+    },
+    {
+      "id": "c014",
+      "prompt": "Which number is *cinquanta*?",
+      "answer": "50",
+      "accept": ["fifty"],
+      "details": "*Cinque* (5) + *-anta* (tens) = 50. The same pattern gives *sessanta* (60), *settanta* (70)…"
+    },
+    {
+      "id": "c015",
+      "prompt": "Spell out the number 100 in Italian.",
+      "answer": "Cento",
+      "details": "*Cento per cento* = 100%. Related to English \"century\" and \"cent\"."
+    },
+    {
+      "id": "c016",
+      "prompt": "Spell out the number 1,000 in Italian.",
+      "answer": "Mille",
+      "details": "The same *mille* as in *grazie mille* (a thousand thanks). Plural: *duemila* (2,000)."
+    },
+    {
+      "id": "c017",
+      "prompt": "What is \"first\" in Italian?",
+      "answer": "Primo",
+      "accept": ["prima"],
+      "details": "Also the name of the pasta course: the *primo piatto* (first dish)."
+    },
+    {
+      "id": "c018",
+      "prompt": "Which weekday is *lunedì*?",
+      "answer": "Monday",
+      "details": "The Moon's day (*luna*). Weekdays aren't capitalised in Italian, and that accent on the *ì* matters."
+    },
+    {
+      "id": "c019",
+      "prompt": "Which weekday is *martedì*?",
+      "answer": "Tuesday",
+      "details": "The day of Mars (*Marte*), the god of war."
+    },
+    {
+      "id": "c020",
+      "prompt": "Which weekday is *mercoledì*?",
+      "answer": "Wednesday",
+      "details": "The day of Mercury (*Mercurio*), the messenger god."
+    },
+    {
+      "id": "c021",
+      "prompt": "Which weekday is *giovedì*?",
+      "answer": "Thursday",
+      "details": "The day of Jupiter (*Giove*). English \"Thursday\" is Thor's day, another thunder god!"
+    },
+    {
+      "id": "c022",
+      "prompt": "Which weekday is *venerdì*?",
+      "answer": "Friday",
+      "details": "The day of Venus (*Venere*)."
+    },
+    {
+      "id": "c023",
+      "prompt": "Which weekday is *sabato*?",
+      "answer": "Saturday",
+      "details": "From \"Sabbath\". No planet here, and no accent either."
+    },
+    {
+      "id": "c024",
+      "prompt": "Which weekday is *domenica*?",
+      "answer": "Sunday",
+      "details": "From Latin *dies dominica*, \"the Lord's day\"."
+    },
+    {
+      "id": "c025",
+      "prompt": "How do you say \"today\" in Italian?",
+      "answer": "Oggi",
+      "details": "OD-jee. *Oggi è lunedì* = today is Monday."
+    },
+    {
+      "id": "c026",
+      "prompt": "How do you say \"tomorrow\" in Italian?",
+      "answer": "Domani",
+      "details": "*A domani!* = see you tomorrow."
+    },
+    {
+      "id": "c027",
+      "prompt": "How do you say \"yesterday\" in Italian?",
+      "answer": "Ieri",
+      "details": "ee-EH-ree. Short, but easy to forget, so give it a second look."
+    },
+    {
+      "id": "c028",
+      "prompt": "How do you ask \"What time is it?\" in Italian?",
+      "answer": "Che ore sono?",
+      "accept": ["che ora è"],
+      "details": "Literally \"what hours are they?\". Plural, because it's usually more than one o'clock!"
+    },
+    {
+      "id": "c029",
+      "prompt": "How do you say \"now\" in Italian?",
+      "answer": "Adesso",
+      "accept": ["ora"],
+      "details": "*Ora* works too. Beware *subito* (\"right away\"), which in practice can mean anything up to \"later\"."
+    },
+    {
+      "id": "c030",
+      "prompt": "What's the Italian word for \"week\"?",
+      "answer": "Settimana",
+      "details": "From *sette* (seven), the seven days. *Fine settimana* = weekend."
+    }
+  ]
+}

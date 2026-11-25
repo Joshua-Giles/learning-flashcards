@@ -15,6 +15,7 @@ import {
   LucideArrowLeft,
   LucideChevronLeft,
   LucideChevronRight,
+  LucideMessageCircleQuestionMark,
   LucideShuffle,
 } from '@lucide/angular';
 import { AwardFeedback } from '../../core/award-feedback';
@@ -23,6 +24,7 @@ import { stillLearning } from '../../core/logic/mastery';
 import { Award, ProgressStore } from '../../core/progress-store';
 import { SetStore } from '../../core/set-store';
 import { FlipCard } from './flip-card';
+import { CaptureService } from '../notebook/capture.service';
 import { StudyGrade, StudySession } from './study-session';
 import { StudySummaryPanel } from './study-summary';
 
@@ -35,6 +37,7 @@ import { StudySummaryPanel } from './study-summary';
     LucideArrowLeft,
     LucideChevronLeft,
     LucideChevronRight,
+    LucideMessageCircleQuestionMark,
     LucideShuffle,
   ],
   host: { '(document:keydown)': 'onKeydown($event)' },
@@ -155,6 +158,14 @@ import { StudySummaryPanel } from './study-summary';
             <button
               type="button"
               class="btn px-3 py-1.5 text-muted hover:bg-surface-2 hover:text-fg"
+              (click)="askQuestion()"
+              data-testid="ask-question"
+            >
+              <svg lucideMessageCircleQuestionMark [size]="16"></svg> Ask <kbd>?</kbd>
+            </button>
+            <button
+              type="button"
+              class="btn px-3 py-1.5 text-muted hover:bg-surface-2 hover:text-fg"
               (click)="act(reshuffle)"
             >
               <svg lucideShuffle [size]="16"></svg> Shuffle &amp; restart <kbd>S</kbd>
@@ -171,7 +182,8 @@ import { StudySummaryPanel } from './study-summary';
 
           <p class="mt-6 hidden text-center text-xs text-muted sm:block">
             <kbd>Space</kbd> flip · <kbd>1</kbd> still learning · <kbd>2</kbd> knew it ·
-            <kbd>←</kbd>/<kbd>→</kbd> move · <kbd>H</kbd> hint · <kbd>S</kbd> shuffle
+            <kbd>←</kbd>/<kbd>→</kbd> move · <kbd>H</kbd> hint · <kbd>S</kbd> shuffle ·
+            <kbd>?</kbd> ask
           </p>
         </div>
       }
@@ -191,6 +203,7 @@ export class StudyPage {
 
   private readonly progress = inject(ProgressStore);
   private readonly feedback = inject(AwardFeedback);
+  private readonly capture = inject(CaptureService);
 
   /** Optional `?only=learning` query param: just the cards still being learned. */
   readonly only = input<string>();
@@ -266,6 +279,18 @@ export class StudyPage {
     this.stage()?.nativeElement.focus({ preventScroll: true });
   }
 
+  /** Note a question about the current card in the notebook. */
+  protected askQuestion(): void {
+    const card = this.session.current();
+    if (!card || !this.set.hasValue()) return;
+    void this.capture.open({
+      setId: this.setId(),
+      cardId: card.id,
+      setTitle: this.set.value().title,
+      cardPrompt: card.prompt,
+    });
+  }
+
   /** Shuffle the whole set and start over. Arrow property so it can be passed to act(). */
   protected readonly reshuffle = (): void => {
     if (this.set.hasValue()) this.begin(this.set.value().cards, { shuffle: true });
@@ -299,6 +324,9 @@ export class StudyPage {
       case 's':
       case 'S':
         this.reshuffle();
+        break;
+      case '?':
+        this.askQuestion();
         break;
       default:
         return;

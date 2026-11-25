@@ -1,0 +1,181 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "italian-essential-verbs",
+  "title": "Italian: Essere, Avere & Friends",
+  "description": "The two verbs everything else leans on, plus a handful of everyday action words and some classic \"avere\" expressions.",
+  "category": "Languages",
+  "emoji": "🗣️",
+  "tags": ["italian", "beginner", "verbs", "grammar"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "What does the verb *essere* mean?",
+      "answer": "To be",
+      "details": "Irregular and everywhere. Master its six forms and half of Italian opens up."
+    },
+    {
+      "id": "c002",
+      "prompt": "*Essere*: how do you say \"I am\"?",
+      "answer": "Io sono",
+      "accept": ["sono"],
+      "details": "Italians usually drop *io*, because the verb already tells you who: *Sono stanco* = I'm tired."
+    },
+    {
+      "id": "c003",
+      "prompt": "*Essere*: how do you say \"you are\" (informal, one person)?",
+      "answer": "Tu sei",
+      "accept": ["sei"],
+      "details": "Same spelling as the number six, *sei*. You'll be fine; context saves you."
+    },
+    {
+      "id": "c004",
+      "prompt": "*Essere*: how do you say \"he/she is\"?",
+      "answer": "È",
+      "accept": ["lui è", "lei è"],
+      "details": "That accent matters: *è* = is, *e* = and. *Lei è italiana e simpatica.*"
+    },
+    {
+      "id": "c005",
+      "prompt": "*Essere*: how do you say \"we are\"?",
+      "answer": "Noi siamo",
+      "accept": ["siamo"],
+      "details": "*Siamo in ritardo!* = we're late! Very common in Italy too."
+    },
+    {
+      "id": "c006",
+      "prompt": "*Essere*: how do you say \"you all are\"?",
+      "answer": "Voi siete",
+      "accept": ["siete"],
+      "details": "*Voi* is plural \"you\", like \"you guys\" or \"y'all\"."
+    },
+    {
+      "id": "c007",
+      "prompt": "*Essere*: how do you say \"they are\"?",
+      "answer": "Loro sono",
+      "accept": ["sono"],
+      "details": "Identical to \"I am\" (*sono*)! Context, or adding *loro*, tells them apart."
+    },
+    {
+      "id": "c008",
+      "prompt": "What does the verb *avere* mean?",
+      "answer": "To have",
+      "details": "Italian uses \"to have\" for lots of things English does with \"to be\": hunger, age, being right…"
+    },
+    {
+      "id": "c009",
+      "prompt": "*Avere*: how do you say \"I have\"?",
+      "answer": "Io ho",
+      "accept": ["ho"],
+      "details": "The *h* is silent: just \"oh\". It's there to tell *ho* (I have) apart from *o* (or)."
+    },
+    {
+      "id": "c010",
+      "prompt": "*Avere*: how do you say \"you have\" (informal, one person)?",
+      "answer": "Tu hai",
+      "accept": ["hai"],
+      "details": "Pronounced \"eye\". *Hai fame?* = are you hungry?"
+    },
+    {
+      "id": "c011",
+      "prompt": "*Avere*: how do you say \"he/she has\"?",
+      "answer": "Ha",
+      "accept": ["lui ha", "lei ha"],
+      "details": "Silent *h* again, so it's just \"ah\". Different from *a* (to/at)."
+    },
+    {
+      "id": "c012",
+      "prompt": "*Avere*: how do you say \"we have\"?",
+      "answer": "Noi abbiamo",
+      "accept": ["abbiamo"],
+      "details": "The *-iamo* ending is \"we\" for almost every Italian verb. Spot it and you know who's talking."
+    },
+    {
+      "id": "c013",
+      "prompt": "*Avere*: how do you say \"you all have\"?",
+      "answer": "Voi avete",
+      "accept": ["avete"],
+      "details": "The *-ete* ending is the \"you all\" form for *-ere* verbs."
+    },
+    {
+      "id": "c014",
+      "prompt": "*Avere*: how do you say \"they have\"?",
+      "answer": "Loro hanno",
+      "accept": ["hanno"],
+      "details": "Not to be confused with *anno* (year). Double *nn*, silent *h*."
+    },
+    {
+      "id": "c015",
+      "prompt": "What does the verb *andare* mean?",
+      "answer": "To go",
+      "details": "Wildly irregular: *vado, vai, va…* *Andiamo!* = let's go!"
+    },
+    {
+      "id": "c016",
+      "prompt": "What does the verb *fare* mean?",
+      "answer": "To do or make",
+      "accept": ["to do", "to make", "do", "make"],
+      "details": "A workhorse verb: *fare una foto* (take a photo), *fare colazione* (have breakfast), *fa caldo* (it's hot)."
+    },
+    {
+      "id": "c017",
+      "prompt": "What does the verb *volere* mean?",
+      "answer": "To want",
+      "details": "Its polite cousin *vorrei* (\"I would like\") is the one to use when ordering."
+    },
+    {
+      "id": "c018",
+      "prompt": "What does the verb *potere* mean?",
+      "answer": "To be able to",
+      "accept": ["can", "be able", "to be able"],
+      "details": "*Posso?* (\"May I?\") is one of the most useful single words in Italian."
+    },
+    {
+      "id": "c019",
+      "prompt": "What does the verb *mangiare* mean?",
+      "answer": "To eat",
+      "details": "Behind the famous Italian-American \"mangia!\" (eat!), said by every grandmother ever."
+    },
+    {
+      "id": "c020",
+      "prompt": "What does the verb *bere* mean?",
+      "answer": "To drink",
+      "details": "Short and irregular: *bevo* (I drink). *Qualcosa da bere?* = something to drink?"
+    },
+    {
+      "id": "c021",
+      "prompt": "What does the verb *parlare* mean?",
+      "answer": "To speak",
+      "accept": ["to talk"],
+      "details": "A perfectly regular *-are* verb, the model for thousands of others: *parlo, parli, parla…*"
+    },
+    {
+      "id": "c022",
+      "prompt": "Using *avere*, how do you say \"I'm hungry\"?",
+      "answer": "Ho fame",
+      "details": "Literally \"I have hunger\". Same pattern: *ho sete* (I'm thirsty), *ho sonno* (I'm sleepy)."
+    },
+    {
+      "id": "c023",
+      "prompt": "Using *avere*, how do you say \"I'm 30 years old\"?",
+      "answer": "Ho trent'anni",
+      "accept": ["ho trenta anni", "ho 30 anni"],
+      "details": "You *have* your years in Italian. Saying *sono trenta* sounds like you're claiming to be thirty people!"
+    },
+    {
+      "id": "c024",
+      "prompt": "How do you say \"there is\" in Italian?",
+      "answer": "C'è",
+      "accept": ["ce", "c e"],
+      "details": "From *ci* + *è*. *C'è un bar qui vicino?* = Is there a café near here?"
+    },
+    {
+      "id": "c025",
+      "prompt": "How do you say \"there are\" in Italian?",
+      "answer": "Ci sono",
+      "details": "Plural partner of *c'è*: *Ci sono due treni.* = There are two trains."
+    }
+  ]
+}

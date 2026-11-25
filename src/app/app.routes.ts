@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
 
-const comingSoon = () => import('./features/coming-soon/coming-soon').then((m) => m.ComingSoon);
-
 export const routes: Routes = [
   {
     path: '',
@@ -25,8 +23,7 @@ export const routes: Routes = [
   {
     path: 'questions',
     title: 'Questions · Flashcards',
-    loadComponent: comingSoon,
-    data: { heading: 'Questions notebook' },
+    loadComponent: () => import('./features/notebook/questions-page').then((m) => m.QuestionsPage),
   },
   {
     path: 'stats',

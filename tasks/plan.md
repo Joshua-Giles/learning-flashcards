@@ -70,11 +70,11 @@ The detailed tasks, with acceptance criteria, verification and files, are in [to
 
 ### Phase 4: Search, notebook, content
 
-- [ ] T12: Search overlay (Ctrl/⌘+K)
-- [ ] T13: Questions notebook and "Copy for Claude"
-- [ ] T14: Content guide and the duplicate check, tuned on real sets
-- [ ] T15: Starter sets: Modest Mouse (band + album)
-- [ ] T16: Starter sets: Italian (5 sets)
+- [x] T12: Search overlay (Ctrl/⌘+K)
+- [x] T13: Questions notebook and "Copy for Claude"
+- [x] T14: Content guide and the duplicate check, tuned on real sets
+- [x] T15: Starter sets: Modest Mouse (band + album)
+- [x] T16: Starter sets: Italian (5 sets)
 
 **Checkpoint D:** every V1 feature is in place, with 7 sets passing `sets:check`. _Review the content tone and accuracy with you._
 

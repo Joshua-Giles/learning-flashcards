@@ -1,0 +1,178 @@
+{
+  "$schema": "../../schema/set.schema.json",
+  "schemaVersion": 1,
+  "id": "italian-travel",
+  "title": "Italian: Getting Around",
+  "description": "Trains, tickets, directions, hotels and signs: the words that get you from the airport to your dinner table.",
+  "category": "Languages",
+  "emoji": "🚆",
+  "tags": ["italian", "beginner", "travel", "directions"],
+  "version": 1,
+  "updated": "2026-11-25",
+  "cards": [
+    {
+      "id": "c001",
+      "prompt": "How do you start asking \"Where is…?\" in Italian?",
+      "answer": "Dov'è",
+      "accept": ["dove è", "dov e", "dove"],
+      "details": "*Dove* + *è* squashed together. *Dov'è la stazione?* = Where's the station?"
+    },
+    {
+      "id": "c002",
+      "prompt": "Asking for directions to catch a train: what's \"station\" in Italian?",
+      "answer": "Stazione",
+      "accept": ["la stazione"],
+      "details": "Big-city main stations are usually *Centrale* or *Termini* (Rome). Look for those names on signs."
+    },
+    {
+      "id": "c003",
+      "prompt": "What's the Italian word for \"train\"?",
+      "answer": "Treno",
+      "details": "Fast trains (*Frecciarossa*, \"red arrow\") link the big cities. Regional trains are slower but cheap."
+    },
+    {
+      "id": "c004",
+      "prompt": "What's the Italian word for \"ticket\"?",
+      "answer": "Biglietto",
+      "details": "Same word for train, bus and museum tickets. A *biglietteria* is the ticket office."
+    },
+    {
+      "id": "c005",
+      "prompt": "How do you ask for a one-way ticket?",
+      "answer": "Solo andata",
+      "accept": ["andata"],
+      "details": "Literally \"only going\"."
+    },
+    {
+      "id": "c006",
+      "prompt": "How do you ask for a return (round-trip) ticket?",
+      "answer": "Andata e ritorno",
+      "details": "\"Going and returning\". Easy once you know *andata*."
+    },
+    {
+      "id": "c007",
+      "prompt": "What's the Italian word for a train \"platform\"?",
+      "answer": "Binario",
+      "details": "Literally \"track\". Departure boards show *Binario 5* and so on, and platform changes are announced at the last minute!"
+    },
+    {
+      "id": "c008",
+      "prompt": "Which Italian verb on ticket machines means \"to validate\"?",
+      "answer": "Convalidare",
+      "details": "On many regional trains you must stamp a paper ticket before boarding. Forgetting can earn a fine."
+    },
+    {
+      "id": "c009",
+      "prompt": "What's the Italian word for \"airport\"?",
+      "answer": "Aeroporto",
+      "details": "Rome's main airport, Fiumicino, is officially named after Leonardo da Vinci."
+    },
+    {
+      "id": "c010",
+      "prompt": "What's the Italian word for a city \"bus\"?",
+      "answer": "Autobus",
+      "accept": ["bus"],
+      "details": "Tickets are often bought *before* boarding, at a *tabaccheria* (a tobacco shop, marked with a big T sign)."
+    },
+    {
+      "id": "c011",
+      "prompt": "What's the Italian word for \"left\" (direction)?",
+      "answer": "Sinistra",
+      "accept": ["a sinistra"],
+      "details": "*Gira a sinistra* = turn left. (Yes, related to English \"sinister\".)"
+    },
+    {
+      "id": "c012",
+      "prompt": "What's the Italian word for \"right\" (direction)?",
+      "answer": "Destra",
+      "accept": ["a destra"],
+      "details": "Related to \"dexterity\", since the right hand was considered the skilful one."
+    },
+    {
+      "id": "c013",
+      "prompt": "How do you say \"straight ahead\" in Italian?",
+      "answer": "Dritto",
+      "accept": ["diritto", "sempre dritto"],
+      "details": "*Sempre dritto* (\"always straight\") is the classic answer, often followed by more hand gestures."
+    },
+    {
+      "id": "c014",
+      "prompt": "How do you ask \"How much does it cost?\"",
+      "answer": "Quanto costa?",
+      "accept": ["quanto costano", "quant'è"],
+      "details": "Plural items: *quanto costano?* At the till, *quant'è?* (\"how much is it?\") is very common."
+    },
+    {
+      "id": "c015",
+      "prompt": "How do you tell a hotel \"I have a reservation\"?",
+      "answer": "Ho una prenotazione",
+      "accept": ["ho prenotato"],
+      "details": "Follow with *a nome di…* (\"under the name of…\")."
+    },
+    {
+      "id": "c016",
+      "prompt": "What's the Italian word for a hotel \"room\"?",
+      "answer": "Camera",
+      "accept": ["stanza"],
+      "details": "Not a photo camera! *Camera doppia* = double room, *camera singola* = single room."
+    },
+    {
+      "id": "c017",
+      "prompt": "What's the Italian word for \"key\"?",
+      "answer": "Chiave",
+      "details": "KYAH-veh. Older hotels may still ask you to leave it at the desk when you go out."
+    },
+    {
+      "id": "c018",
+      "prompt": "How do you ask for the bathroom / toilet?",
+      "answer": "Il bagno",
+      "accept": ["bagno", "toilette", "dov'è il bagno"],
+      "details": "*Dov'è il bagno?* Café toilets are often for customers only, so buy a coffee first."
+    },
+    {
+      "id": "c019",
+      "prompt": "What's the Italian word for \"pharmacy\"?",
+      "answer": "Farmacia",
+      "details": "Look for the green cross sign. Pharmacists give good advice for minor ailments."
+    },
+    {
+      "id": "c020",
+      "prompt": "What do you shout for \"Help!\" in Italian?",
+      "answer": "Aiuto!",
+      "accept": ["aiuto"],
+      "details": "ah-YOO-toh. The European emergency number, 112, works in Italy too."
+    },
+    {
+      "id": "c021",
+      "prompt": "What does the shop sign *aperto* mean?",
+      "answer": "Open",
+      "details": "Many shops close for a few hours after lunch, so *aperto* at 10 am doesn't guarantee *aperto* at 2 pm."
+    },
+    {
+      "id": "c022",
+      "prompt": "What does the shop sign *chiuso* mean?",
+      "answer": "Closed",
+      "details": "KYOO-zoh. *Chiuso per ferie* = closed for holidays, very common in August."
+    },
+    {
+      "id": "c023",
+      "prompt": "What does the sign *uscita* mean?",
+      "answer": "Exit",
+      "details": "The way in is *entrata* or *ingresso*. *Uscita di sicurezza* = emergency exit."
+    },
+    {
+      "id": "c024",
+      "prompt": "What does the sign *entrata* mean?",
+      "answer": "Entrance",
+      "accept": ["entry", "way in"],
+      "details": "You'll also see *ingresso*, especially at museums."
+    },
+    {
+      "id": "c025",
+      "prompt": "What does *sciopero* mean on a train or bus notice?",
+      "answer": "Strike",
+      "accept": ["a strike", "transport strike"],
+      "details": "Transport strikes are usually announced in advance and often run for set hours. Worth checking before a travel day."
+    }
+  ]
+}

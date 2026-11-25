@@ -30,7 +30,7 @@ npm run verify       # lint + format check + sets tests + sets check + unit test
 
 ## Content workflow (generating sets)
 
-Read `docs/content-guide.md` (task T14) before writing sets. The essentials:
+**Read `docs/content-guide.md` before writing or changing any set**, including when the user pastes "Copy for Claude" questions from the app. The essentials:
 
 - One set per file: `public/sets/<set-id>.json`. The file name must equal `id`. Add `"$schema": "../../schema/set.schema.json"`.
 - **Card IDs are permanent.** Never rename, renumber or reuse a card ID, because progress is keyed on `setId/cardId`. Add new cards with new IDs, and bump the set's `version` and `updated`.
