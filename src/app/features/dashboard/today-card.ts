@@ -17,13 +17,13 @@ import { ProgressRing } from '../../shared/progress-ring';
       </lf-progress-ring>
       <div class="min-w-0 flex-1">
         <h2 id="today-heading" class="text-sm font-medium text-muted">Today</h2>
-        <p class="text-2xl font-semibold tabular-nums">
+        <p class="text-2xl font-semibold whitespace-nowrap tabular-nums">
           {{ progress.todayStats().points }}
           <span class="text-base font-normal text-muted">/ {{ progress.dailyGoal() }} points</span>
         </p>
         <p class="mt-0.5 text-sm text-muted">{{ message() }}</p>
       </div>
-      <dl class="flex gap-6">
+      <dl class="flex w-full justify-around gap-6 sm:w-auto">
         <div class="text-center">
           <dt class="text-xs text-muted">Streak</dt>
           <dd class="text-2xl font-semibold tabular-nums" data-testid="today-streak">

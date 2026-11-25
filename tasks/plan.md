@@ -80,8 +80,8 @@ The detailed tasks, with acceptance criteria, verification and files, are in [to
 
 ### Phase 5: Polish & ship
 
-- [ ] T17: Accessibility, reduced-motion and mobile pass
-- [ ] T18: CI (GitHub Actions) and, optionally, GitHub Pages deploy
+- [x] T17: Accessibility, reduced-motion and mobile pass
+- [x] T18: CI (GitHub Actions) and, optionally, GitHub Pages deploy
 
 **Checkpoint E:** every success criterion in SPEC.md is met.
 

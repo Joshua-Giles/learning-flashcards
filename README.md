@@ -1,5 +1,7 @@
 # 🗂️ Learning Flashcards
 
+[![CI](https://github.com/Joshua-Giles/learning-flashcards/actions/workflows/ci.yml/badge.svg)](https://github.com/Joshua-Giles/learning-flashcards/actions/workflows/ci.yml)
+
 A personal flashcard app for learning anything: bands, movies, languages. You flip through cards first, then quiz yourself by typing the answers, and you earn points and keep a daily streak going.
 
 Built with Angular 22, Tailwind CSS v4 and Angular CDK. Card sets are plain JSON files in [`public/sets/`](public/sets), and everything else stays in your browser.
@@ -10,6 +12,15 @@ Built with Angular 22, Tailwind CSS v4 and Angular CDK. Card sets are plain JSON
 npm install
 npm start          # http://localhost:4200
 ```
+
+Requires Node 22.22.3+ (or 24.15+). Useful commands:
+
+```bash
+npm run verify     # lint, format check, set validation, unit tests, production build
+npm run e2e        # Playwright end-to-end + axe accessibility checks
+```
+
+CI runs both on every push and pull request.
 
 ## Adding a set
 

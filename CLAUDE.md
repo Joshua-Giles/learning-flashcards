@@ -11,7 +11,7 @@ Personal Angular 22 flashcard app. Single user, no backend. Card sets are JSON f
 ```
 npm start            # dev server → http://localhost:4200
 npm test             # Vitest unit tests (single run); npm run test:watch for watch mode
-npm run e2e          # Playwright (starts its own dev server on :4300)
+npm run e2e          # Playwright incl. axe a11y checks (starts its own dev server on :4300)
 npm run lint         # angular-eslint
 npm run format       # prettier --write .
 npm run sets:check   # validate public/sets/*.json + regenerate public/sets/index.json
@@ -38,6 +38,8 @@ npm run verify       # lint + format check + sets tests + sets check + unit test
 - **Music topics are band-first:** a new CD gets a big band set (about 35–45 cards) plus a small album companion set (about 10–15). Write a full album set only when explicitly asked. If the band already has a set, extend it. See SPEC F8.
 - **Accuracy over flair:** if you're not confident a fact is right, leave it out.
 - Always finish with `npm run sets:check` and fix every error and warning.
+
+CI (`.github/workflows/ci.yml`) runs `npm run verify` and `npm run e2e` on every push and PR.
 
 ## Boundaries
 

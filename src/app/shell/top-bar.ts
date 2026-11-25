@@ -35,9 +35,13 @@ import { SearchService } from '../features/search/search.service';
       <svg lucideMenu [size]="20"></svg>
     </button>
 
-    <a routerLink="/" class="flex items-center gap-2 rounded-md px-1 font-semibold tracking-tight">
+    <a
+      routerLink="/"
+      aria-label="Flashcards home"
+      class="flex items-center gap-2 rounded-md px-1 font-semibold tracking-tight"
+    >
       <span aria-hidden="true">🗂️</span>
-      <span>Flashcards</span>
+      <span class="hidden min-[400px]:inline">Flashcards</span>
     </a>
 
     <div class="ml-auto flex items-center gap-1">
@@ -55,10 +59,11 @@ import { SearchService } from '../features/search/search.service';
       <a
         routerLink="/stats"
         class="flex items-center gap-2 rounded-lg px-2 py-1 text-sm hover:bg-surface-2"
-        [attr.aria-label]="statusLabel()"
         [title]="statusLabel()"
         data-testid="daily-status"
       >
+        <!-- Name comes from the visible text plus sr-only words, so it always contains
+             what's on screen (WCAG 2.5.3 Label in Name). -->
         <lf-progress-ring [value]="progress.goalPct()" [size]="26">
           @if (progress.streak().todayMet) {
             ✓
@@ -67,15 +72,17 @@ import { SearchService } from '../features/search/search.service';
         <span class="tabular-nums" data-testid="today-points"
           >{{ progress.todayStats().points
           }}<span class="text-muted">/{{ progress.dailyGoal() }}</span></span
-        >
+        ><span class="sr-only"> points today,</span>
         <span
-          class="flex items-center gap-0.5 font-medium tabular-nums"
+          class="flex items-center gap-0.5 font-medium tabular-nums motion-reduce:animate-none"
           [class.text-muted]="progress.streak().current === 0"
           [class.animate-pulse]="progress.streak().atRisk"
           data-testid="streak"
           [attr.data-at-risk]="progress.streak().atRisk"
           ><span aria-hidden="true" [class.grayscale]="!progress.streak().todayMet">🔥</span
           >{{ progress.streak().current }}</span
+        ><span class="sr-only"
+          >-day streak{{ progress.streak().atRisk ? ' (at risk)' : '' }}. View stats</span
         >
       </a>
       <button

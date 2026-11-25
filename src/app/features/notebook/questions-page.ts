@@ -32,11 +32,11 @@ type Filter = QuestionStatus | 'all';
           (input)="draft.set($any($event.target).value)"
           data-testid="new-question"
         ></textarea>
-        <div class="flex gap-2 sm:flex-col">
+        <div class="flex gap-2 sm:w-56 sm:flex-col">
           <label for="new-question-set" class="sr-only">Related set</label>
           <select
             id="new-question-set"
-            class="rounded-lg border border-line bg-surface px-2 py-2 text-sm"
+            class="w-full min-w-0 flex-1 rounded-lg border border-line bg-surface px-2 py-2 text-sm sm:flex-none"
             (change)="draftSet.set($any($event.target).value)"
           >
             <option value="">General</option>
@@ -44,7 +44,9 @@ type Filter = QuestionStatus | 'all';
               <option [value]="s.id" [selected]="draftSet() === s.id">{{ s.title }}</option>
             }
           </select>
-          <button type="submit" class="btn btn-primary" [disabled]="!draft().trim()">Add</button>
+          <button type="submit" class="btn btn-primary shrink-0" [disabled]="!draft().trim()">
+            Add
+          </button>
         </div>
       </div>
     </form>
@@ -146,18 +148,12 @@ type Filter = QuestionStatus | 'all';
             <time [attr.datetime]="q.createdAt">{{ q.createdAt.slice(0, 10) }}</time>
             <span class="ml-auto flex gap-1">
               @if (editing() !== q.id) {
-                <button
-                  type="button"
-                  class="rounded px-2 py-1 hover:bg-surface-2"
-                  (click)="editing.set(q.id)"
-                >
-                  Edit
-                </button>
+                <button type="button" class="text-action" (click)="editing.set(q.id)">Edit</button>
               }
               @if (q.status === 'resolved') {
                 <button
                   type="button"
-                  class="rounded px-2 py-1 hover:bg-surface-2"
+                  class="text-action"
                   (click)="notebook.setStatus([q.id], 'open')"
                 >
                   Reopen
@@ -165,7 +161,7 @@ type Filter = QuestionStatus | 'all';
               } @else {
                 <button
                   type="button"
-                  class="rounded px-2 py-1 hover:bg-surface-2"
+                  class="text-action"
                   (click)="notebook.setStatus([q.id], 'resolved')"
                 >
                   Resolve
@@ -174,17 +170,13 @@ type Filter = QuestionStatus | 'all';
               @if (confirmDelete() === q.id) {
                 <button
                   type="button"
-                  class="rounded px-2 py-1 text-danger hover:bg-danger/10"
+                  class="text-action text-danger hover:bg-danger/10"
                   (click)="notebook.remove(q.id)"
                 >
                   Really delete?
                 </button>
               } @else {
-                <button
-                  type="button"
-                  class="rounded px-2 py-1 hover:bg-surface-2"
-                  (click)="confirmDelete.set(q.id)"
-                >
+                <button type="button" class="text-action" (click)="confirmDelete.set(q.id)">
                   Delete
                 </button>
               }

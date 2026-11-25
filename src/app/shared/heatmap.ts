@@ -1,5 +1,6 @@
 import { Component, ElementRef, computed, inject, input, signal } from '@angular/core';
 import { HeatCell, buildHeatmap } from '../core/logic/heatmap';
+import { LayoutService } from '../core/layout.service';
 import { addDays, parseLocalDay } from '../core/logic/local-day';
 import { DayStats, LocalDay } from '../core/models/state';
 
@@ -22,20 +23,21 @@ const LEVEL_CLASS = [
     <div class="overflow-x-auto pb-1">
       <div
         role="grid"
-        [attr.aria-label]="'Daily points, last ' + weeks() + ' weeks'"
-        class="inline-flex flex-col gap-[3px]"
+        [attr.aria-label]="'Daily points, last ' + shownWeeks() + ' weeks'"
+        class="inline-flex flex-col"
+        [class]="compact() ? 'gap-1' : 'gap-[3px]'"
         data-testid="heatmap"
       >
         @for (row of grid(); track $index; let r = $index) {
-          <div role="row" class="flex items-center gap-[3px]">
+          <div role="row" class="flex items-center" [class]="compact() ? 'gap-1' : 'gap-[3px]'">
             <span class="w-7 text-[0.6rem] text-muted" aria-hidden="true">{{
               r % 2 === 1 ? weekdays[r] : ''
             }}</span>
             @for (cell of row; track cell.day; let c = $index) {
               <span
                 role="gridcell"
-                class="size-3 rounded-[3px] outline-offset-1"
-                [class]="cell.future ? 'invisible' : levelClass[cell.level]"
+                class="rounded-[3px] outline-offset-1"
+                [class]="cellClass(cell)"
                 [class.ring-1]="cell.day === focusDay()"
                 [class.ring-accent]="cell.day === focusDay()"
                 [attr.tabindex]="cell.day === focusDay() ? 0 : -1"
@@ -72,10 +74,19 @@ export class Heatmap {
   readonly goal = input.required<number>();
   readonly weeks = input(26);
 
+  /**
+   * On phones, show fewer, bigger days: 13 weeks of 20px cells on a 24px pitch keeps
+   * every day tappable (WCAG 2.5.8 target size, spacing exception) without scrolling.
+   */
+  protected readonly compact = inject(LayoutService).isMobile;
+  protected readonly shownWeeks = computed(() =>
+    this.compact() ? Math.min(13, this.weeks()) : this.weeks(),
+  );
+
   protected readonly weekdays = WEEKDAYS;
   protected readonly levelClass = LEVEL_CLASS;
   protected readonly grid = computed(() =>
-    buildHeatmap(this.days(), this.today(), this.goal(), this.weeks()),
+    buildHeatmap(this.days(), this.today(), this.goal(), this.shownWeeks()),
   );
 
   /** Day picked by the user (null until they move); focusDay falls back to today. */
@@ -87,6 +98,11 @@ export class Heatmap {
     return map;
   });
   protected readonly activeCell = computed(() => this.cells().get(this.focusDay()));
+
+  protected cellClass(cell: HeatCell): string {
+    const size = this.compact() ? 'size-5' : 'size-3';
+    return `${size} ${cell.future ? 'invisible' : this.levelClass[cell.level]}`;
+  }
 
   protected describe(cell: HeatCell): string {
     const date = parseLocalDay(cell.day).toLocaleDateString(undefined, {

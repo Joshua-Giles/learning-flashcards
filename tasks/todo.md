@@ -310,9 +310,9 @@ They're travel- and conversation-focused. Use `accept` for common variants and k
 **Description:** Run axe on every route and fix any violations. Check focus order and visible focus, `aria-live` for quiz feedback, reduced motion everywhere, and touch targets of ≥ 44px. Check layouts at 375px.
 **Acceptance criteria:**
 
-- [ ] No axe violations on any route, in either theme
-- [ ] Every flow is usable at 375px and with the keyboard only
-- [ ] With reduced motion on, nothing flips, slides or bursts confetti
+- [x] No axe violations on any route, in either theme (`e2e/a11y.spec.ts`, WCAG 2.2 AA tags)
+- [x] Every flow is usable at 375px and with the keyboard only
+- [x] With reduced motion on, nothing flips, slides or bursts confetti
       **Verification:** Playwright + `@axe-core/playwright` (needs your OK as a new dev dependency); manual mobile check
       **Dependencies:** T11, T12, T13
       **Files:** various small fixes, `e2e/a11y.spec.ts`
@@ -323,7 +323,7 @@ They're travel- and conversation-focused. Use `accept` for common variants and k
 **Description:** A GitHub Actions workflow that runs `npm ci`, `npm run verify` and the Playwright e2e tests on every push and PR. If you choose Pages (Open Question 3), add a deploy job (`base-href`, a `404.html` copy so client-side routes work).
 **Acceptance criteria:**
 
-- [ ] CI is green on main, and a failing test or a broken set file fails CI
+- [ ] CI is green on main, and a failing test or a broken set file fails CI (workflow added. A broken set fails `npm run verify` locally. Not yet confirmed on GitHub)
 - [ ] (Optional) the app is live on Pages and deep links work on refresh
       **Verification:** a test PR with a deliberately broken set fails, and fixing it passes
       **Dependencies:** T17 (needs your OK, since deployment is "Ask first")
@@ -332,5 +332,20 @@ They're travel- and conversation-focused. Use `accept` for common variants and k
 
 ### ✅ Checkpoint E: V1 done
 
-- [ ] Every success criterion in SPEC.md has been checked
-- [ ] SPEC.md is updated to match what was built
+- [x] Every success criterion in SPEC.md has been checked (see notes below)
+- [x] SPEC.md is updated to match what was built
+
+**Success criteria review (2026-11-25):**
+
+1. ⚠️ **Partly met.** From the dashboard it's 2 clicks to the first card (set → Study), and the flip is a 3rd action (Space/click). Search reaches a card with Ctrl+K, typing and Enter.
+2. ⚠️ **Not measured.** The flip uses only a CSS transform (GPU-composited, no layout shift by design), but there is no frame-rate measurement yet.
+3. ✅ Matcher cases covered by unit tests (perché/perche, Buongorno → close, il gatto).
+4. ✅ Persistence and export/import round-trip (unit and e2e).
+5. ✅ Streak across days and reset after a gap (unit and e2e with a mocked clock).
+6. ✅ Dashboard and leaderboard lists from seeded state (e2e).
+7. ✅ "Copy for Claude" format (unit snapshot and e2e clipboard read).
+8. ✅ Typo search under 100ms with 400 cards (unit), and "buongorno" finds the card (e2e).
+9. ✅ axe WCAG 2.2 AA clean in both themes, and no theme flash (e2e).
+10. ✅ `npm run verify` is green, and all 7 starter sets (plus the sample set) pass `sets:check`.
+
+**Accessibility notes:** automated checks (axe) and keyboard-only flows are covered by tests. A screen-reader pass (NVDA or VoiceOver) has **not** been done yet. The heatmap shows 13 weeks on phones so day cells meet the 24px target spacing.

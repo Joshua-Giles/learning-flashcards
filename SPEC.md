@@ -1,6 +1,6 @@
 # Spec: Learning Flashcards — V1
 
-Status: **draft, awaiting review**
+Status: **V1 implemented** (Phases 1–5). Review notes are in tasks/todo.md → Checkpoint E.
 Last updated: 2026-11-24
 
 ## Objective
@@ -53,7 +53,7 @@ A personal web app for learning topics through sets of cards that Claude writes.
 | Search             | `fuse.js`                                                                                             | Small fuzzy search library that works without a server                             |
 | Celebration        | `canvas-confetti`                                                                                     | Small and fun, used for "set mastered" and new personal bests                      |
 | Unit tests         | **Vitest** (the Angular CLI default)                                                                  |                                                                                    |
-| E2E tests          | **Playwright**                                                                                        | Covers the core flows in a real browser                                            |
+| E2E tests          | **Playwright** + `@axe-core/playwright`                                                               | Covers the core flows in a real browser                                            |
 | Content validation | Node script with **Ajv** (JSON Schema)                                                                | Catches broken or duplicate cards before they reach the app                        |
 | Lint/format        | `angular-eslint` + Prettier                                                                           |                                                                                    |
 
@@ -396,6 +396,8 @@ Date logic is tested with an injected clock so streaks crossing midnight and DST
 - **Streak freezes:** wait to see whether the streak feels too punishing.
 
 ## Open Questions
+
+_Still open after V1:_ hosting (Q3). Everything else was answered or the default was accepted.
 
 _Resolved: Angular 22 confirmed. The album is_ We Were Dead Before the Ship Even Sank*, and music sets focus on the band (see F8).*
 
