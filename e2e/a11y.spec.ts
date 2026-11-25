@@ -49,6 +49,10 @@ for (const theme of ['light', 'dark'] as const) {
       await expectNoViolations(page, `${theme} study front`);
       await page.keyboard.press('Space');
       await expect(page.getByTestId('grade-knew')).toBeVisible();
+      // Reduced motion crossfades the faces; scan only once the answer is fully opaque,
+      // otherwise axe measures half-transparent text mid-fade (flaky in CI).
+      await expect(page.getByTestId('card-back')).toHaveCSS('opacity', '1');
+      await expect(page.getByTestId('card-front')).toHaveCSS('opacity', '0');
       await expectNoViolations(page, `${theme} study back`);
       await page.keyboard.press('2'); // grade the flipped first card
       for (let i = 0; i < 7; i++) {
